@@ -3,11 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useTheme } from "@/context/ThemeContext";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-lg">
@@ -94,42 +93,7 @@ const Navbar: React.FC = () => {
                 Get Started
               </span>
             </Link>
-            <button
-              onClick={toggleTheme}
-              className="ml-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-            >
-              {theme === "dark" ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 3v1m0 16v1m8.485-8.485l-.707-.707M4.929 4.929l-.707-.707M21 12h-1m-16 0H3m16.485 4.485l-.707-.707M4.929 19.071l-.707-.707M12 5.37a7 7 0 100 13.26 7 7 0 000-13.26z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-gray-800"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.293 14.293A8 8 0 118.707 5.707a9 9 0 108.586 8.586z"
-                  />
-                </svg>
-              )}
-            </button>
+            <ThemeToggle />
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -234,42 +198,7 @@ const Navbar: React.FC = () => {
                 Get Started
               </span>
             </Link>
-            <button
-              onClick={toggleTheme}
-              className="mt-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 block mx-auto"
-            >
-              {theme === "dark" ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 3v1m0 16v1m8.485-8.485l-.707-.707M4.929 4.929l-.707-.707M21 12h-1m-16 0H3m16.485 4.485l-.707-.707M4.929 19.071l-.707-.707M12 5.37a7 7 0 100 13.26 7 7 0 000-13.26z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-gray-800"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.293 14.293A8 8 0 118.707 5.707a9 9 0 108.586 8.586z"
-                  />
-                </svg>
-              )}
-            </button>
+            <ThemeToggle />
           </div>
         </div>
       )}
