@@ -1,14 +1,22 @@
-import React from "react";
-import Hero from "../components/Hero";
-import Features from "../components/Features";
+// app/page.tsx
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Feature from "@/components/Feature";
+import Facts from "@/components/Facts";
+import Service from "@/components/Service";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
     <div>
+      <Navbar />
       <Hero />
-      <Features />
+      <Feature />
+      <Facts />
+      <Service />
+      <Newsletter />
+      <Footer />
     </div>
   );
-};
-
-export default Home;
+}

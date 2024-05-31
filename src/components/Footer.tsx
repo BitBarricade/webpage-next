@@ -1,117 +1,171 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faMapMarkerAlt,
+  faPhoneAlt,
+  faEnvelope,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer: React.FC = () => {
   return (
-    <div
-      className="container-fluid bg-primary text-light footer wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div className="container py-5 px-lg-5">
-        <div className="row g-5">
-          <div className="col-md-6 col-lg-3">
-            <p className="section-title text-white h5 mb-4">
-              <span></span>
+    <div className="bg-primary text-light py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <p className="text-white text-lg font-semibold mb-4">Address</p>
+            <p className="flex items-center">
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
+              123 Street, New York, USA
             </p>
-            <p>
-              <i className="fa fa-map-marker-alt me-3"></i>
+            <p className="flex items-center">
+              <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" />
+              +012 345 67890
             </p>
-            <p>
-              <i className="fa fa-phone-alt me-3">+012 345 67890</i>
+            <p className="flex items-center">
+              <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+              info@example.com
             </p>
-            <p>
-              <i className="fa fa-envelope me-3">BitBarricade@gmail.com</i>
-            </p>
-            <div className="d-flex pt-2">
-              <a className="btn btn-outline-light btn-social" href="">
-                <i className="fab fa-twitter"></i>
+            <div className="flex mt-4 space-x-2">
+              <a href="#" className="btn btn-outline-light btn-social">
+                <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a className="btn btn-outline-light btn-social" href="">
-                <i className="fab fa-facebook-f"></i>
+              <a href="#" className="btn btn-outline-light btn-social">
+                <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a className="btn btn-outline-light btn-social" href="">
-                <i className="fab fa-instagram"></i>
+              <a href="#" className="btn btn-outline-light btn-social">
+                <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a className="btn btn-outline-light btn-social" href="">
-                <i className="fab fa-linkedin-in"></i>
+              <a href="#" className="btn btn-outline-light btn-social">
+                <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
             </div>
           </div>
-          <div className="col-md-6 col-lg-3">
-            <p className="section-title text-white h5 mb-4">
-              Quick Link<span></span>
-            </p>
-            <Link href="/about" className="btn btn-link">
+          <div>
+            <p className="text-white text-lg font-semibold mb-4">Quick Link</p>
+            <Link href="/about" className="text-white block mb-2">
               About Us
             </Link>
-            <Link href="/contact" className="btn btn-link">
+            <Link href="/contact" className="text-white block mb-2">
               Contact Us
             </Link>
-            <Link href="/privacy-policy" className="btn btn-link">
+            <Link href="/privacy" className="text-white block mb-2">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="btn btn-link">
+            <Link href="/terms" className="text-white block mb-2">
               Terms & Condition
             </Link>
-            <Link href="/career" className="btn btn-link">
+            <Link href="/career" className="text-white block mb-2">
               Career
             </Link>
           </div>
-          <div className="col-md-6 col-lg-3">
-            <p className="section-title text-white h5 mb-4">
-              Newsletter<span></span>
-            </p>
+          <div>
+            <p className="text-white text-lg font-semibold mb-4">Gallery</p>
+            <div className="grid grid-cols-3 gap-2">
+              <Image
+                className="w-full"
+                src="/img/portfolio-1.jpg"
+                alt="Gallery"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="w-full"
+                src="/img/portfolio-2.jpg"
+                alt="Gallery"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="w-full"
+                src="/img/portfolio-3.jpg"
+                alt="Gallery"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="w-full"
+                src="/img/portfolio-4.jpg"
+                alt="Gallery"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="w-full"
+                src="/img/portfolio-5.jpg"
+                alt="Gallery"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="w-full"
+                src="/img/portfolio-6.jpg"
+                alt="Gallery"
+                width={100}
+                height={100}
+              />
+            </div>
+          </div>
+          <div>
+            <p className="text-white text-lg font-semibold mb-4">Newsletter</p>
             <p>
               Feeling Lost in the Digital Jungle? We&apos;re Your Guide!
               Subscribe to our newsletter and get the latest news in your inbox.
             </p>
-            <div className="position-relative w-100 mt-3">
+            <div className="relative mt-3">
               <input
-                className="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                className="form-control border-0 rounded-full w-full pl-4 pr-10"
                 type="text"
                 placeholder="Your Email"
                 style={{ height: "48px" }}
               />
               <button
                 type="button"
-                className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                className="btn shadow-none absolute top-0 right-0 mt-1 mr-2"
               >
-                <i className="fa fa-paper-plane text-primary fs-4"></i>
+                <FontAwesomeIcon
+                  icon={faPaperPlane}
+                  className="text-primary fs-4"
+                />
               </button>
             </div>
           </div>
         </div>
-      </div>
-      <div className="container px-lg-5">
-        <div className="copyright">
-          <div className="row">
-            <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy;{" "}
-              <Link href="#" className="border-bottom">
-                BitBarricade
-              </Link>
-              , All Right Reserved. Designed By{" "}
-              <Link href="https://bitbarricade.in" className="border-bottom">
-                Bit Barricade
-              </Link>
+        <div className="mt-8 border-t border-gray-200 pt-8">
+          <div className="flex flex-col md:flex-row justify-between">
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              &copy; <Link href="/">BitBarricade</Link>, All Right Reserved.{" "}
               <br />
+              Designed By <a href="https://bitbarricade.in">
+                Bit Barricade
+              </a>{" "}
               <br />
               Distributed By{" "}
-              <Link
-                href="https://bitbarricade.in"
-                target="_blank"
-                className="border-bottom"
-              >
+              <a href="https://bitbarricade.in" target="_blank">
                 Bit Barricade Solutions
-              </Link>
+              </a>
             </div>
-            <div className="col-md-6 text-center text-md-end">
-              <div className="footer-menu">
-                <Link href="/">Home</Link>
-                <Link href="/cookies">Cookies</Link>
-                <Link href="/help">Help</Link>
-                <Link href="/faqs">FQAs</Link>
-              </div>
+            <div className="text-center md:text-right">
+              <Link href="/" className="text-white block mb-2">
+                Home
+              </Link>
+              <Link href="/cookies" className="text-white block mb-2">
+                Cookies
+              </Link>
+              <Link href="/help" className="text-white block mb-2">
+                Help
+              </Link>
+              <Link href="/faq" className="text-white block mb-2">
+                FAQs
+              </Link>
             </div>
           </div>
         </div>
