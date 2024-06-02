@@ -1,5 +1,5 @@
 // app/page.tsx
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero";
 import Feature from "@/components/Feature";
 import Facts from "@/components/Facts";
@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="container-xxl bg-white p-0">
       <Navbar />
       <Hero />
       <Feature />
