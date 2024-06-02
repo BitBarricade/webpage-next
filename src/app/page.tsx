@@ -1,11 +1,11 @@
 // app/page.tsx
-import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero";
 import Feature from "@/components/Feature";
 import Facts from "@/components/Facts";
 import Service from "@/components/Service";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 
 export default function Home() {
   return (
