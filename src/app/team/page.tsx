@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero";
 import Team from "@/components/Team";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 
 const TeamPage: React.FC = () => {
   return (

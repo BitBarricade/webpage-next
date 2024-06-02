@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero";
 import TestimonialList from "@/components/TestimonialList";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 
 const TestimonialPage: React.FC = () => {
   return (

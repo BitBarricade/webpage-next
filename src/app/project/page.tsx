@@ -1,8 +1,9 @@
 import React from "react";
-import Navbar from "@/components/Navbar/Navbar";
+
 import Hero from "@/components/Hero";
 import ProjectList from "@/components/ProjectList";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 
 const ProjectPage: React.FC = () => {
   return (

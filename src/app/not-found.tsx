@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "@/components/Navbar/Navbar";
 import NotFound from "@/components/NotFound";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 
 const NotFoundPage: React.FC = () => {
   return (
