@@ -123,6 +123,13 @@
 .getStarted {
     color: var(--black);
     background-color: var(--light);
+    visibility: visible;
+    font-weight: bold;
+}
+
+.getStarted:hover {
+    color: var(--black);
+    background-color: var(--light);
 }
 
 .stickyTop .getStarted {

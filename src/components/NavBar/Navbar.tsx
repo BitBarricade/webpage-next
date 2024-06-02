@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ThemeToggle from "../ThemeToggle";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import Styles from './NavBar.module.css';
 
 const Navbar: React.FC = () => {

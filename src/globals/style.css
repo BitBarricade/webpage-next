@@ -29,7 +29,17 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #726D7B;
+  background-color: #F6F4F9;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 
 @layer utilities {
   .text-balance {

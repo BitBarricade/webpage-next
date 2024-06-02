@@ -1,5 +1,6 @@
 import React from "react";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
+import Styles from './ThemeToggle.module.css';
 
 const ThemeToggle: React.FC = () => {
   const { theme, setTheme } = useTheme();
@@ -11,7 +12,7 @@ const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="ml-4 p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 dark:focus:ring-white"
+      className={`btn rounded-pill py-2 px-2 ms-3 ${Styles.ThemeBtn}`}
     >
       {theme === "dark" ? (
         <svg

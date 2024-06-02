@@ -1,0 +1,11 @@
+.ThemeBtn {
+    color: var(--black);
+    background-color: var(--light);
+    visibility: visible;
+    font-weight: bold;
+}
+
+.ThemeBtn:hover {
+    color: var(--black);
+    background-color: var(--light);
+}
