@@ -1,19 +1,25 @@
 /******* Customized Bootstrap ********/
 
-$primary: #6222CC;
-$secondary: #FBA504;
-$light: #F6F4F9;
-$dark: #04000B;
+$primary-color: #6222CC;
+$secondary-color: #6C757D;
+$background-color: #FFFFFF;
+$surface-color: #F8F9FA;
+$text-color: #212529;
+$secondary-text-color: #6C757D;
+$border-color: #DEE2E6;
+$accent-color: #FFC107;
+$link-color: #007BFF;
+$hover-color: #0056B3;
 
 $font-family-base: 'Heebo', sans-serif;
 
 $headings-font-family: 'Jost', sans-serif;
 
-$body-bg: $light;
+$body-bg: $background-color;
 
 $body-color: #726D7B;
 
-$headings-color: $dark;
+$headings-color: $text-color;
 
 $display-font-weight: 700;
 

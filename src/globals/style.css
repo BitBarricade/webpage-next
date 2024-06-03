@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* :root {
   --primary: #6222CC;
   --secondary: #FBA504;
   --light: #f4f8f9;
@@ -14,32 +11,68 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
     --primary: #6222CC;
     --secondary: #FBA504;
     --light: #f4f8f9;
     --dark: #04000B;
   }
+} */
+
+:root {
+  --primary-color: #6222CC;
+  --secondary-color: #6C757D;
+  --background-color: #FFFFFF;
+  --surface-color: #F8F9FA;
+  --text-color: #212529;
+  --text-color2: #adc3da;
+  --secondary-text-color: #6C757D;
+  --border-color: #DEE2E6;
+  --border-color-faded: rgba(256, 256, 256, .1);
+  --accent-color: #FFC107;
+  --link-color: #007BFF;
+  --hover-color: #0056B3;
 }
 
+[data-theme='dark'] {
+  --primary-color: #1E90FF;
+  --secondary-color: #A9A9A9;
+  --background-color: #2b2a2a;
+  --surface-color: #1E1E1E;
+  --text-color: #E0E0E0;
+  --text-color2: #292929;
+  --secondary-text-color: #A9A9A9;
+  --border-color: #2C2C2C;
+  --border-color-faded: rgba(256, 256, 256, .1);
+  --accent-color: #FFC107;
+  --link-color: #1E90FF;
+  --hover-color: #4682B4;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #1E90FF;
+    --secondary-color: #A9A9A9;
+    --background-color: #121212;
+    --surface-color: #1E1E1E;
+    --text-color: #E0E0E0;
+    --secondary-text-color: #A9A9A9;
+    --border-color: #2C2C2C;
+    --accent-color: #FFC107;
+    --link-color: #1E90FF;
+    --hover-color: #4682B4;
+  }
+} */
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   margin: 0;
   font-family: "Heebo", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #726D7B;
-  background-color: #F6F4F9;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
-
 
 @layer utilities {
   .text-balance {
@@ -75,7 +108,7 @@ h6,
 }
 
 .btn:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  box-shadow: 0 0 10px var(--surface-color);
 }
 
 .btn-square {

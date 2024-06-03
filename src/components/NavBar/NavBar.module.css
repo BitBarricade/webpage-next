@@ -2,12 +2,7 @@
 /*** Navbar ***/
 .navbar .dropdownToggle::after {
     border: none;
-    content: "\f067";
-    font-family: "Font Awesome 5 Free";
-    font-size: 10px;
-    font-weight: bold;
-    vertical-align: middle;
-    margin-left: 8px;
+    content: "";
 }
 
 .navbarLight .navbarNav .navLink {
@@ -17,7 +12,7 @@
     font-family: 'Jost', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: var(--light) !important;
+    color: var(--surface-color) !important;
     outline: none;
     transition: .5s;
     visibility: visible;
@@ -25,16 +20,16 @@
 
 .stickyTop.navbarLight .navbarNav .navLink {
     padding: 20px 0;
-    color: var(--dark) !important;
+    color: var(--text-color) !important;
 }
 
 .navbarLight .navbarNav .navLink:hover,
 .navbarLight .navbarNav .navLink.active {
-    color: var(--secondary) !important;
+    color: var(--accent-color) !important;
 }
 
 .navbarLight .navbarBrand h1 {
-    color: #FFFFFF;
+    color: var(--surface-color);
 }
 
 .navbarLight .navbarBrand img {
@@ -49,23 +44,23 @@
 @media (max-width: 991.98px) {
     .stickyTop.navbarLight {
         position: relative;
-        background: #FFFFFF;
+        background: var(--background-color);
     }
 
     .navbarLight .navbarCollapse {
         margin-top: 15px;
-        border-top: 1px solid #DDDDDD;
+        border-top: 1px solid var(--border-color);
     }
 
     .navbarLight .navbarNav .navLink,
     .stickyTop.navbarLight .navbarNav .navLink {
         padding: 10px 0;
         margin-left: 0;
-        color: var(--dark) !important;
+        color: var(--text-color) !important;
     }
 
     .navbarLight .navbarBrand h1 {
-        color: var(--primary);
+        color: var(--text-color);
     }
 
     .navbarLight .navbarBrand img {
@@ -79,17 +74,17 @@
         width: 100%;
         top: 0;
         left: 0;
-        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        border-bottom: 1px solid var(--border-color-faded);
         z-index: 999;
     }
     
     .stickyTop.navbarLight {
         position: fixed;
-        background: #FFFFFF;
+        background: var(--background-color);
     }
 
     .stickyTop.navbarLight .navbarBrand h1 {
-        color: var(--primary);
+        color: var(--primary-color);
     }
 
     .navbarLight .navbarNav .navItem .dropdownMenu {
@@ -110,29 +105,34 @@
     }
 
     .navbarLight .btn {
-        color: var(--dark);
-        background: #FFFFFF;
+        color: var(--text-color);
+        background: var(--background-color);
     }
 
     .stickyTop.navbarLight .btn {
-        color: var(--dark);
-        background: var(--secondary);
+        color: var(--text-color);
+        background: var(--accent-color);
     }
 }
 
 .getStarted {
-    color: var(--black);
-    background-color: var(--light);
+    color: var(--text-color);
+    background-color: var(--background-color);
     visibility: visible;
     font-weight: bold;
 }
 
-.getStarted:hover {
-    color: var(--black);
-    background-color: var(--light);
+.getStarted:hover, .getStarted:active {
+    color: var(--text-color) !important;
+    background-color: var(--background-color) !important;
 }
 
 .stickyTop .getStarted {
-    color: var(--light);
-    background-color: var(--secondary);
+    color: var(--text-color);
+    background-color: var(--accent-color);
+}
+
+.stickyTop.getStarted:hover, .stickyTop.getStarted:active {
+    color: var(--text-color) !important;
+    background-color: var(--accent-color) !important;
 }

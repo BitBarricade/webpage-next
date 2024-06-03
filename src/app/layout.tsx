@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Inter } from "next/font/google";
+import { Jost } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 import FavIcon from '@/components/FavIcon';
 import "@/globals/style.css";
 import "@/globals/style.scss";
-import "@/globals/bootstrap.min.css";
-const inter = Inter({ subsets: ["latin"] });
+const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BitBarricade",
   description: "BitBarricade Solutions",
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +22,7 @@ export default function RootLayout({
       <head>
         <FavIcon />
       </head>
-      <body className={inter.className}>
+      <body className={jost.className}>
         <ThemeProvider>{children}</ThemeProvider>
         <SpeedInsights />
       </body>
