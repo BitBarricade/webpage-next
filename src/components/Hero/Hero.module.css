@@ -73,6 +73,12 @@
     color: var(--text-color);
 }
 
+.Image {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: ZoomIn;
+}
+
 @keyframes slideInDown {
     0% {
         transform: translate3d(0, -100%, 0);
@@ -103,5 +109,16 @@
     
     100% {
         transform: translateZ(0);
+    }
+}
+
+@keyframes ZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    
+    50% {
+        opacity: 1;
     }
 }

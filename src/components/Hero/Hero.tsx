@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             <Link href="/contact" className={`btn btn-light py-sm-3 px-sm-5 rounded-pill ${Styles.ContactUs}`}>Contact Us</Link>
           </div>
           <div className="col-lg-6 text-center text-lg-start">
-            <Image className="img-fluid animated zoomIn" src="/img/hero.png" alt="hero illustration" width={500} height={500}/>
+            <Image className={`img-fluid ${Styles.Image}`} src="/img/hero.png" alt="hero illustration" width={500} height={500}/>
           </div>
         </div>
       </div>
