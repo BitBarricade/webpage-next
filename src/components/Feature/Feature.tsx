@@ -5,6 +5,7 @@ import {
   faSearch,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
+import Styles from "./Feature.module.css";
 
 const features = [
   {
@@ -29,22 +30,25 @@ const features = [
 
 const Feature: React.FC = () => {
   return (
-    <div className="py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="container-xxl py-5">
+      <div className="container py-5 px-lg-5">
+        <div className="row g-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transform transition hover:scale-105"
+              className={`col-lg-4 ${Styles.fadeInUp}`}
             >
-              <FontAwesomeIcon
-                icon={feature.icon}
-                className="text-primary mb-4 text-3xl animate-zoomIn"
-              />
-              <h5 className="text-xl font-semibold mb-3">{feature.title}</h5>
-              <p className="text-gray-600 dark:text-gray-300">
-                {feature.description}
-              </p>
+              <div className={`bg-light rounded text-center p-4 ${Styles.featureItem}`}>
+                <FontAwesomeIcon
+                  icon={feature.icon}
+                  className="text-primary mb-4"
+                  style={{width: "4em", display: "inline"}}
+                />
+                <h5 className="mb-3">{feature.title}</h5>
+                <p className="m-0">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

@@ -1,0 +1,27 @@
+
+.fadeInUp {
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    transition: .5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.featureItem {
+    transition: .5s;
+}
+
+.featureItem:hover {
+    margin-top: -15px;
+}

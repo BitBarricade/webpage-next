@@ -1,7 +1,7 @@
 // app/page.tsx
 import Hero from "@/components/Hero/Hero";
-import Feature from "@/components/Feature";
-import Facts from "@/components/Facts";
+import Feature from "@/components/Feature/Feature";
+import Facts from "@/components/Facts/Facts";
 import Service from "@/components/Service";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
