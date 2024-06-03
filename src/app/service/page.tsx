@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/Hero";
 import Service from "@/components/Service";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";

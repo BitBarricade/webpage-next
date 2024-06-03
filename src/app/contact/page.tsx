@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/Hero";
 import ContactForm from "@/components/ContactForm";
 
 const ContactPage = () => {
