@@ -4,6 +4,7 @@
     visibility: visible;
     font-weight: bold;
     box-shadow: 0 0 10px var(--text-color2) !important;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .ThemeBtn:hover {

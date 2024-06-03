@@ -16,6 +16,7 @@
     outline: none;
     transition: .5s;
     visibility: visible;
+    transition: color 0.3s;
 }
 
 .stickyTop.navbarLight .navbarNav .navLink {
@@ -30,6 +31,7 @@
 
 .navbarLight .navbarBrand h1 {
     color: var(--surface-color);
+    transition: color 0.3s;
 }
 
 .navbarLight .navbarBrand img {
@@ -45,6 +47,7 @@
     .stickyTop.navbarLight {
         position: relative;
         background: var(--background-color);
+        transition: background-color 0.3s;
     }
 
     .navbarLight .navbarCollapse {
@@ -120,6 +123,7 @@
     background-color: var(--background-color);
     visibility: visible;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .getStarted:hover, .getStarted:active {
