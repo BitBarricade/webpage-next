@@ -2,6 +2,7 @@
 .footer {
     margin-top: 6rem;
     padding-top: 9rem;
+    background-color: var(--primary-color) !important;
     background:
         url(/img/bg-top.png),
         url(/img/map.png);
@@ -11,7 +12,7 @@
     background-repeat: no-repeat;
 }
 
-.footer .btn.btn-social {
+.footer .btnSocial {
     margin-right: 5px;
     width: 40px;
     height: 40px;
@@ -24,11 +25,12 @@
     transition: .3s;
 }
 
-.footer .btn.btn-social:hover {
-    color: var(--primary);
+.footer .btnSocial:hover {
+    color: var(--primary-color);
+    box-shadow: none;
 }
 
-.footer .btn.btn-link {
+.footer .btnLink {
     display: block;
     margin-bottom: 10px;
     padding: 0;
@@ -38,18 +40,17 @@
     transition: .3s;
 }
 
-.footer .btn.btn-link::before {
+.footer .btnLink::before {
     position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
+    content: "\27A4";
     font-weight: 900;
     margin-right: 10px;
 }
 
-.footer .btn.btn-link:hover {
+.footer .btnLink:hover {
     letter-spacing: 1px;
     box-shadow: none;
-    color: var(--secondary);
+    color: var(--accent-color);
 }
 
 .footer .copyright {
@@ -62,19 +63,69 @@
     color: var(--light);
 }
 
-.footer .footer-menu a {
+.footer .footerMenu a {
     margin-right: 15px;
     padding-right: 15px;
     border-right: 1px solid rgba(255, 255, 255, .1);
 }
 
-.footer .footer-menu a:last-child {
+.footer .footerMenu a:last-child {
     margin-right: 0;
     padding-right: 0;
     border-right: none;
 }
 
 .footer .copyright a:hover,
-.footer .footer-menu a:hover {
+.footer .footerMenu a:hover {
     color: var(--secondary);
+}
+
+/*** Section Title ***/
+.SectionTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--surface-color);
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 30px;
+    height: 2px;
+}
+
+.SectionTitle span:last-child {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    top: 0;
+    right: -20px;
+}
+
+.SectionTitle span:last-child::after {
+    right: auto;
+    left: -20px;
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child,
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    background: var(--surface-color);
+}
+
+.Color {
+    color: var(--surface-color);
 }

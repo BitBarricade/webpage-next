@@ -18,58 +18,58 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-primary text-light py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <p className="text-white text-lg font-semibold mb-4">Address</p>
-            <p className="flex items-center">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
+    <div className={`container-fluid bg-primary text-light ${Styles.footer}`}>
+      <div className="container py-5 px-lg-5">
+        <div className="row g-5">
+          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+            <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Address<span></span></p>
+            <p>
+              <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" style={{width: "1em", display: "inline"}}/>
               123 Street, New York, USA
             </p>
-            <p className="flex items-center">
-              <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" />
+            <p>
+              <FontAwesomeIcon icon={faPhoneAlt} className="mr-2" style={{width: "1em", display: "inline"}}/>
               +012 345 67890
             </p>
-            <p className="flex items-center">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} className="mr-2" style={{width: "1em", display: "inline"}}/>
               info@example.com
             </p>
-            <div className="flex mt-4 space-x-2">
-              <a href="#" className="btn btn-outline-light btn-social">
-                <FontAwesomeIcon icon={faTwitter} />
+            <div className="d-flex pt-2">
+              <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
+                <FontAwesomeIcon icon={faTwitter} style={{width: "1em", display: "inline"}}/>
               </a>
-              <a href="#" className="btn btn-outline-light btn-social">
-                <FontAwesomeIcon icon={faFacebookF} />
+              <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
+                <FontAwesomeIcon icon={faFacebookF} style={{width: "1em", display: "inline"}}/>
               </a>
-              <a href="#" className="btn btn-outline-light btn-social">
-                <FontAwesomeIcon icon={faInstagram} />
+              <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
+                <FontAwesomeIcon icon={faInstagram} style={{width: "1em", display: "inline"}}/>
               </a>
-              <a href="#" className="btn btn-outline-light btn-social">
-                <FontAwesomeIcon icon={faLinkedinIn} />
+              <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
+                <FontAwesomeIcon icon={faLinkedinIn} style={{width: "1em", display: "inline"}}/>
               </a>
             </div>
           </div>
-          <div>
-            <p className="text-white text-lg font-semibold mb-4">Quick Link</p>
-            <Link href="/about" className="text-white block mb-2">
+          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+            <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Quick Link<span></span></p>
+            <Link href="/about" className={`btn ${Styles.btnLink}`}>
               About Us
             </Link>
-            <Link href="/contact" className="text-white block mb-2">
+            <Link href="/contact" className={`btn ${Styles.btnLink}`}>
               Contact Us
             </Link>
-            <Link href="/privacy" className="text-white block mb-2">
+            <Link href="/privacy" className={`btn ${Styles.btnLink}`}>
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-white block mb-2">
+            <Link href="/terms" className={`btn ${Styles.btnLink}`}>
               Terms & Condition
             </Link>
-            <Link href="/career" className="text-white block mb-2">
+            <Link href="/career" className={`btn ${Styles.btnLink}`}>
               Career
             </Link>
           </div>
-          <div>
-            <p className="text-white text-lg font-semibold mb-4">Gallery</p>
+          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+            <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Gallery<span></span></p>
             <div className="grid grid-cols-3 gap-2">
               <Image
                 className="w-full"
@@ -115,13 +115,13 @@ const Footer: React.FC = () => {
               />
             </div>
           </div>
-          <div>
-            <p className="text-white text-lg font-semibold mb-4">Newsletter</p>
+          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+            <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Newsletter<span></span></p>
             <p>
               Feeling Lost in the Digital Jungle? We&apos;re Your Guide!
               Subscribe to our newsletter and get the latest news in your inbox.
             </p>
-            <div className="relative mt-3">
+            <div className="position-relative w-100 mt-3">
               <input
                 className="form-control border-0 rounded-full w-full pl-4 pr-10"
                 type="text"
@@ -140,33 +140,36 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-200 pt-8">
-          <div className="flex flex-col md:flex-row justify-between">
-            <div className="text-center md:text-left mb-4 md:mb-0">
-              &copy; <Link href="/">BitBarricade</Link>, All Right Reserved.{" "}
-              <br />
-              Designed By <a href="https://bitbarricade.in">
-                Bit Barricade
-              </a>{" "}
-              <br />
-              Distributed By{" "}
-              <a href="https://bitbarricade.in" target="_blank">
-                Bit Barricade Solutions
-              </a>
-            </div>
-            <div className="text-center md:text-right">
-              <Link href="/" className="text-white block mb-2">
-                Home
-              </Link>
-              <Link href="/cookies" className="text-white block mb-2">
-                Cookies
-              </Link>
-              <Link href="/help" className="text-white block mb-2">
-                Help
-              </Link>
-              <Link href="/faq" className="text-white block mb-2">
-                FAQs
-              </Link>
+        <div className="container px-lg-5">
+          <div className={Styles.copyright}>
+            <div className="row">
+              <div className={`col-md-6 text-center text-md-start mb-3 mb-md-0 ${Styles.Color}`}>
+                &copy; <Link href="/" className="border-bottom">BitBarricade</Link>, All Right Reserved.{" "}
+                Designed By <a className="border-bottom" href="https://bitbarricade.in">
+                  Bit Barricade
+                </a>{" "}
+                <br />
+                Distributed By{" "}
+                <a className="border-bottom" href="https://bitbarricade.in" target="_blank">
+                  Bit Barricade Solutions
+                </a>
+              </div>
+              <div className={`col-md-6 text-center text-md-end ${Styles.Color}`}>
+                <div className={Styles.footerMenu}>
+                  <Link href="/">
+                    Home
+                  </Link>
+                  <Link href="/cookies">
+                    Cookies
+                  </Link>
+                  <Link href="/help">
+                    Help
+                  </Link>
+                  <Link href="/faq">
+                    FAQs
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

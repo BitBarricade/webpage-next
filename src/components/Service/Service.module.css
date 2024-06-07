@@ -59,7 +59,7 @@
 .serviceItem:hover {
     margin-top: -15px;
     padding-bottom: 60px;
-    background: var(--primary);
+    background: var(--primary-color);
 }
 
 .serviceItem .serviceIcon {
@@ -69,16 +69,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--light);
+    color: var(--primary-color);
     background: url(/img/blob-primary.png) center center no-repeat;
     background-size: contain;
     transition: .5s;
 }
 
 .serviceItem:hover .serviceIcon {
-    color: var(--dark);
+    color: var(--accent-color);
     background: url(/img/blob-secondary.png) center center no-repeat;
     background-size: contain;
+}
+.serviceItem .IconColor {
+    color: var(--text-color);
+}
+
+.serviceItem:hover .IconColor {
+    color: var(--surface-color);
 }
 
 .serviceItem h5,
@@ -88,26 +95,27 @@
 
 .serviceItem:hover h5,
 .serviceItem:hover p {
-    color: #FFFFFF;
+    color: var(--text-color);
 }
 
-.serviceItem a.btn {
+.serviceItem .KnowMore {
     position: absolute;
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--primary);
-    background: #FFFFFF;
+    color: var(--primary-color);
+    background: #fff;
     border-radius: 40px 40px 0 0;
     transition: .5s;
     z-index: 1;
 }
 
-.serviceItem a.btn:hover {
-    color: var(--dark);
-    background: var(--secondary);
+.serviceItem .KnowMore:hover {
+    color: var(--text-color);
+    background: var(--accent-color);
+    box-shadow: none;
 }
 
-.serviceItem:hover a.btn {
+.serviceItem:hover .KnowMore {
     bottom: 0;
 }

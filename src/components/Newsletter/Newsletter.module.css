@@ -1,12 +1,12 @@
 /*** Newsletter ***/
-.newsletter {
+.newsLetter {
     margin: 6rem 0;
     background:
-        url(../img/blob-top-left.png),
-        url(../img/blob-top-right.png),
-        url(../img/blob-bottom-left.png),
-        url(../img/blob-bottom-right.png),
-        url(../img/blob-center.png);
+        url(/img/blob-top-left.png),
+        url(/img/blob-top-right.png),
+        url(/img/blob-bottom-left.png),
+        url(/img/blob-bottom-right.png),
+        url(/img/blob-center.png);
     background-position:
         left 0px top 0px,
         right 0px top 0px,
@@ -14,4 +14,55 @@
         right 0px bottom 0px,
         center center;
     background-repeat: no-repeat;
+    background-color: var(--primary-color) !important;
+}
+
+/*** Section Title ***/
+.SectionTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--surface-color);
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 30px;
+    height: 2px;
+}
+
+.SectionTitle span:last-child {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    top: 0;
+    right: -20px;
+}
+
+.SectionTitle span:last-child::after {
+    right: auto;
+    left: -20px;
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child,
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    background: var(--surface-color);
+}
+
+.Color {
+    color: var(--surface-color);
 }

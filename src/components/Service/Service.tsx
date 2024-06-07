@@ -75,14 +75,14 @@ const Service: React.FC = () => {
                 <div className={`flex-shrink-0 ${Styles.serviceIcon}`}>
                   <FontAwesomeIcon
                     icon={service.icon}
-                    className="text-4xl"
+                    className={`mb4 ${Styles.IconColor}`}
+                    style={{width: "2em", display: "inline"}}
                   />
                 </div>
                 <h5 className="mb-3">{service.title}</h5>
                 <p className="m-0">{service.description}</p>
-                <Link href={service.link} className="btn btn-square">
-                  <FontAwesomeIcon icon={faArrowRight} />
-                  Read More
+                <Link href={service.link} className={`btn btn-square ${Styles.KnowMore}`}>
+                  <FontAwesomeIcon icon={faArrowRight} style={{width: "1em", display: "inline"}}/>
                 </Link>
               </div>
             </div>
