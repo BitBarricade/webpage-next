@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faSearch,
   faLaptopCode,
   faMailBulk,
@@ -8,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import { faAndroid, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import Styles from "./Service.module.css";
 
 const services = [
   {
@@ -53,34 +55,36 @@ const services = [
 
 const Service: React.FC = () => {
   return (
-    <div className="container-xxl py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="section-title text-secondary text-2xl mb-4">
+    <div className="container-xxl py-5">
+      <div className="container py-5 px-lg-5">
+        <div className="text-center">
+          <p className={`justify-content-center ${Styles.SectionTitle}`}>
             <span></span>Our Services<span></span>
           </p>
-          <h1 className="text-4xl font-extrabold mb-4">
+          <h1 className="text-center mb-5">
             What Solutions We Provide
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="row g-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-item bg-white rounded-lg shadow-lg p-6 text-center transform transition hover:scale-105"
+              className="col-lg-4 col-md-6"
             >
-              <div className="service-icon mb-4">
-                <FontAwesomeIcon
-                  icon={service.icon}
-                  className="text-primary text-4xl"
-                />
+              <div className={`d-flex flex-column text-center rounded ${Styles.serviceItem}`}>
+                <div className={`flex-shrink-0 ${Styles.serviceIcon}`}>
+                  <FontAwesomeIcon
+                    icon={service.icon}
+                    className="text-4xl"
+                  />
+                </div>
+                <h5 className="mb-3">{service.title}</h5>
+                <p className="m-0">{service.description}</p>
+                <Link href={service.link} className="btn btn-square">
+                  <FontAwesomeIcon icon={faArrowRight} />
+                  Read More
+                </Link>
               </div>
-              <h5 className="text-2xl font-semibold mb-3">{service.title}</h5>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <Link href={service.link} className="btn btn-primary">
-                <FontAwesomeIcon icon={faSearch} className="mr-2" />
-                Read More
-              </Link>
             </div>
           ))}
         </div>

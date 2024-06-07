@@ -1,0 +1,113 @@
+
+
+/*** Section Title ***/
+.SectionTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 30px;
+    height: 2px;
+}
+
+.SectionTitle span:last-child {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    top: 0;
+    right: -20px;
+}
+
+.SectionTitle span:last-child::after {
+    right: auto;
+    left: -20px;
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child,
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    background: var(--accent-color);
+}
+
+
+/*** Service ***/
+.serviceItem {
+    position: relative;
+    padding: 45px 30px;
+    background: var(--light);
+    overflow: hidden;
+    transition: .5s;
+}
+
+.serviceItem:hover {
+    margin-top: -15px;
+    padding-bottom: 60px;
+    background: var(--primary);
+}
+
+.serviceItem .serviceIcon {
+    margin: 0 auto 20px auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    background: url(/img/blob-primary.png) center center no-repeat;
+    background-size: contain;
+    transition: .5s;
+}
+
+.serviceItem:hover .serviceIcon {
+    color: var(--dark);
+    background: url(/img/blob-secondary.png) center center no-repeat;
+    background-size: contain;
+}
+
+.serviceItem h5,
+.serviceItem p {
+    transition: .5s;
+}
+
+.serviceItem:hover h5,
+.serviceItem:hover p {
+    color: #FFFFFF;
+}
+
+.serviceItem a.btn {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary);
+    background: #FFFFFF;
+    border-radius: 40px 40px 0 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.serviceItem a.btn:hover {
+    color: var(--dark);
+    background: var(--secondary);
+}
+
+.serviceItem:hover a.btn {
+    bottom: 0;
+}

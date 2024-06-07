@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero/Hero";
-import Service from "@/components/Service";
+import Service from "@/components/Service/Service";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar/NavBar";
