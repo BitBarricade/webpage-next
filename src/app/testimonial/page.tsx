@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "@/components/Hero/Hero";
 import TestimonialList from "@/components/TestimonialList";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/NavBar/NavBar";
 
 const TestimonialPage: React.FC = () => {
