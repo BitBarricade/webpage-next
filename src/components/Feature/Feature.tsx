@@ -41,7 +41,7 @@ const Feature: React.FC = () => {
               <div className={`bg-light rounded text-center p-4 ${Styles.featureItem}`}>
                 <FontAwesomeIcon
                   icon={feature.icon}
-                  className="text-primary mb-4"
+                  className={`mb-4 ${Styles.IconColor}`}
                   style={{width: "4em", display: "inline"}}
                 />
                 <h5 className="mb-3">{feature.title}</h5>

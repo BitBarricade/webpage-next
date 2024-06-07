@@ -25,3 +25,7 @@
 .featureItem:hover {
     margin-top: -15px;
 }
+
+.IconColor {
+    color: var(--primary-color) !important;
+}

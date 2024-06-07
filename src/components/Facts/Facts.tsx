@@ -16,38 +16,38 @@ const Facts: React.FC = () => {
           <div className={`col-md-6 col-lg-3 text-center ${Styles.Animate}`} style={{ visibility: "visible", animationDelay: "0.1s" }}>
             <FontAwesomeIcon
               icon={faCertificate}
-              className="text-secondary mb-3"
+              className="mb-3"
               style={{ width: "4em", display: "inline" }}
             />
-            <h1 className="text-white mb-2">2</h1>
-            <p className="text-white mb-0">Years Experience</p>
+            <h1 className={`mb-2 ${Styles.TextColor}`}>2</h1>
+            <p className={`mb-0 ${Styles.TextColor}`}>Years Experience</p>
           </div>
           <div className={`col-md-6 col-lg-3 text-center ${Styles.Animate}`} style={{ visibility: "visible", animationDelay: "0.3s" }}>
             <FontAwesomeIcon
               icon={faUsersCog}
-              className="text-secondary mb-3"
+              className="mb-3"
               style={{ width: "4em", display: "inline" }}
             />
-            <h1 className="text-white mb-2">4</h1>
-            <p className="text-white mb-0">Team Members</p>
+            <h1 className={`mb-2 ${Styles.TextColor}`}>4</h1>
+            <p className={`mb-0 ${Styles.TextColor}`}>Team Members</p>
           </div>
           <div className={`col-md-6 col-lg-3 text-center ${Styles.Animate}`} style={{ visibility: "visible", animationDelay: "0.5s" }}>
             <FontAwesomeIcon
               icon={faUsers}
-              className="text-secondary mb-3"
+              className="mb-3"
               style={{ width: "4em", display: "inline" }}
             />
-            <h1 className="text-white mb-2">12</h1>
-            <p className="text-white mb-0">Satisfied Clients</p>
+            <h1 className={`mb-2 ${Styles.TextColor}`}>12</h1>
+            <p className={`mb-0 ${Styles.TextColor}`}>Satisfied Clients</p>
           </div>
           <div className={`col-md-6 col-lg-3 text-center ${Styles.Animate}`} style={{ visibility: "visible", animationDelay: "0.7s" }}>
             <FontAwesomeIcon
               icon={faCheck}
-              className="text-secondary mb-3"
+              className="mb-2"
               style={{ width: "4em", display: "inline" }}
             />
-            <h1 className="text-white mb-2">12</h1>
-            <p className="text-white mb-0">Completed Projects</p>
+            <h1 className={`mb-2 ${Styles.TextColor}`}>12</h1>
+            <p className={`mb-0 ${Styles.TextColor}`}>Completed Projects</p>
           </div>
         </div>
       </div>
