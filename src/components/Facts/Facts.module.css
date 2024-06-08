@@ -24,7 +24,7 @@
 }
 
 .TextColor {
-    color: var(--surface-color) !important;
+    color: var(--white-color) !important;
 }
 @keyframes fadeInUp {
     0% {

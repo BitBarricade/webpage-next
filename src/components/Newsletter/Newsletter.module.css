@@ -24,7 +24,7 @@
     align-items: center;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--surface-color);
+    color: var(--accent-color);
 }
 
 .SectionTitle span:first-child,
@@ -60,9 +60,9 @@
 .SectionTitle span:last-child,
 .SectionTitle span:first-child::after,
 .SectionTitle span:last-child::after {
-    background: var(--surface-color);
+    background: var(--accent-color);
 }
 
 .Color {
-    color: var(--surface-color);
+    color: var(--white-color);
 }

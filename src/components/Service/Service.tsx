@@ -61,7 +61,7 @@ const Service: React.FC = () => {
           <p className={`justify-content-center ${Styles.SectionTitle}`}>
             <span></span>Our Services<span></span>
           </p>
-          <h1 className="text-center mb-5">
+          <h1 className={`text-center mb-5 ${Styles.Header}`}>
             What Solutions We Provide
           </h1>
         </div>
@@ -79,7 +79,7 @@ const Service: React.FC = () => {
                     style={{width: "2em", display: "inline"}}
                   />
                 </div>
-                <h5 className="mb-3">{service.title}</h5>
+                <h5 className={`mb-3 ${Styles.Title}`}>{service.title}</h5>
                 <p className="m-0">{service.description}</p>
                 <Link href={service.link} className={`btn btn-square ${Styles.KnowMore}`}>
                   <FontAwesomeIcon icon={faArrowRight} style={{width: "1em", display: "inline"}}/>

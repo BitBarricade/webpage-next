@@ -38,14 +38,14 @@ const Feature: React.FC = () => {
               key={index}
               className={`col-lg-4 ${Styles.fadeInUp}`}
             >
-              <div className={`bg-light rounded text-center p-4 ${Styles.featureItem}`}>
+              <div className={`rounded text-center p-4 ${Styles.featureItem}`}>
                 <FontAwesomeIcon
                   icon={feature.icon}
                   className={`mb-4 ${Styles.IconColor}`}
                   style={{width: "4em", display: "inline"}}
                 />
-                <h5 className="mb-3">{feature.title}</h5>
-                <p className="m-0">
+                <h5 className={`mb-3 ${Styles.Title}`}>{feature.title}</h5>
+                <p className={`m-0 ${Styles.Description}`}>
                   {feature.description}
                 </p>
               </div>

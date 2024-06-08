@@ -12,16 +12,15 @@
     font-family: 'Jost', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: var(--surface-color) !important;
+    color: var(--navbar-color) !important;
     outline: none;
-    transition: .5s;
     visibility: visible;
-    transition: color 0.3s;
+    transition: .5s;
 }
 
 .stickyTop.navbarLight .navbarNav .navLink {
     padding: 20px 0;
-    color: var(--text-color) !important;
+    color: var(--navbar-color) !important;
 }
 
 .navbarLight .navbarNav .navLink:hover,
@@ -30,8 +29,9 @@
 }
 
 .navbarLight .navbarBrand h1 {
-    color: var(--surface-color);
+    color: var(--navbar-color);
     transition: color 0.3s;
+    transition: .5s;
 }
 
 .navbarLight .navbarBrand img {
@@ -46,24 +46,27 @@
 @media (max-width: 991.98px) {
     .stickyTop.navbarLight {
         position: relative;
-        background: var(--background-color);
-        transition: background-color 0.3s;
+        background: var(--background-navbar-color);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        transition: .5s;
     }
 
     .navbarLight .navbarCollapse {
         margin-top: 15px;
         border-top: 1px solid var(--border-color);
+        transition: .5s;
     }
 
     .navbarLight .navbarNav .navLink,
     .stickyTop.navbarLight .navbarNav .navLink {
         padding: 10px 0;
         margin-left: 0;
-        color: var(--text-color) !important;
+        color: var(--navbar-color) !important;
     }
 
     .navbarLight .navbarBrand h1 {
-        color: var(--text-color);
+        color: var(--navbar-color);
     }
 
     .navbarLight .navbarBrand img {
@@ -79,15 +82,19 @@
         left: 0;
         border-bottom: 1px solid var(--border-color-faded);
         z-index: 999;
+        transition: .5s;
     }
     
     .stickyTop.navbarLight {
         position: fixed;
-        background: var(--background-color);
+        background: var(--background-navbar-color);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        transition: .5s;
     }
 
     .stickyTop.navbarLight .navbarBrand h1 {
-        color: var(--primary-color);
+        color: var(--navbar-color);
     }
 
     .navbarLight .navbarNav .navItem .dropdownMenu {
@@ -110,6 +117,7 @@
     .navbarLight .btn {
         color: var(--text-color);
         background: var(--background-color);
+        transition: .5s;
     }
 
     .stickyTop.navbarLight .btn {
@@ -119,24 +127,14 @@
 }
 
 .getStarted {
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--navbar-color);
+    background-color: var(--accent-color);
     visibility: visible;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    transition: .5s;
 }
 
 .getStarted:hover, .getStarted:active {
-    color: var(--text-color) !important;
-    background-color: var(--background-color) !important;
-}
-
-.stickyTop .getStarted {
-    color: var(--text-color);
-    background-color: var(--accent-color);
-}
-
-.stickyTop.getStarted:hover, .stickyTop.getStarted:active {
-    color: var(--text-color) !important;
-    background-color: var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    background-color: var(--navbar-color) !important;
 }

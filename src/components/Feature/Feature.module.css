@@ -19,13 +19,21 @@
 }
 
 .featureItem {
+    background-color: var(--card-bg-color);
     transition: .5s;
 }
 
 .featureItem:hover {
     margin-top: -15px;
+    margin-bottom: 15px;
+    border: 0.5px solid var(--surface-color);
+    box-shadow: 0 0 10px var(--surface-color);
 }
 
 .IconColor {
     color: var(--primary-color) !important;
+}
+
+.Title, .Description {
+    color: var(--text-color) !important;
 }

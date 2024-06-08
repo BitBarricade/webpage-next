@@ -46,7 +46,7 @@
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: slideInDown;
-    color: var(--surface-color) !important;
+    color: var(--white-color) !important;
     transition: color 0.3s;
 }
 
@@ -54,7 +54,7 @@
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: slideInDown;
-    color: var(--surface-color) !important;
+    color: var(--white-color) !important;
     transition: color 0.3s;
 }
 
@@ -63,28 +63,28 @@
     animation-fill-mode: both;
     animation-name: slideInLeft;
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--white-color);
     border: none;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 .ReadMore:hover, .ReadMore:active {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 .ContactUs {
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: slideInRight;
-    background-color: var(--surface-color);
-    color: var(--text-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
     border: none;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .ContactUs:hover, .ContactUs:active {
-    background-color: var(--surface-color);
-    color: var(--text-color);
+    background-color: var(--white-color);
+    color: var(--primary-color);
 }
 
 .Image {

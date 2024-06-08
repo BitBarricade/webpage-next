@@ -23,17 +23,18 @@ const Newsletter: React.FC = () => {
             </p>
             <div className="position-relative w-100 mt-3">
               <input
-                className="form-control border-0 rounded-full w-full pl-4 pr-10 h-12"
+                className="form-control border-0 rounded-pill w-100 ps-4 pe-5"
                 type="text"
                 placeholder="Enter Your Email"
+                style={{height: "48px"}}
               />
               <button
                 type="button"
-                className="btn shadow-none absolute top-0 right-0 mt-1 mr-2"
+                className="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
               >
                 <FontAwesomeIcon
                   icon={faPaperPlane}
-                  className="text-primary text-2xl"
+                  style={{width: "1.5em", display: "inline", color: "var(--primary-color)"}}
                 />
               </button>
             </div>

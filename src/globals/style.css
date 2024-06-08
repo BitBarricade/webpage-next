@@ -10,7 +10,12 @@
   --primary-color: #6222CC;
   --secondary-color: #6C757D;
   --background-color: #FFFFFF;
+  --card-bg-color: #f8f9fa;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --background-navbar-color: rgba(255, 255, 255, 0.25);
   --surface-color: #F8F9FA;
+  --navbar-color: #434c54;
   --text-color: #212529;
   --text-color2: #adc3da;
   --secondary-text-color: #6C757D;
@@ -25,7 +30,12 @@
   --primary-color: #44046e;
   --secondary-color: #A9A9A9;
   --background-color: #272525;
+  --card-bg-color: #2b2929;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --background-navbar-color: rgba(39, 37, 37, 0.25);;
   --surface-color: #1E1E1E;
+  --navbar-color: #F8F9FA;
   --text-color: #E0E0E0;
   --text-color2: #292929;
   --secondary-text-color: #A9A9A9;

@@ -48,18 +48,31 @@
 
 
 /*** Service ***/
+
+.Header {
+    color: var(--text-color) !important;
+    transition: .5s;
+}
+
 .serviceItem {
     position: relative;
     padding: 45px 30px;
-    background: var(--light);
+    background: var(--card-bg-color);
+    color: var(--text-color);
     overflow: hidden;
     transition: .5s;
+}
+
+.Title {
+    color: var(--text-color) !important;
 }
 
 .serviceItem:hover {
     margin-top: -15px;
     padding-bottom: 60px;
     background: var(--primary-color);
+    border: 0.5px solid var(--surface-color);
+    box-shadow: 0 0 10px var(--surface-color);
 }
 
 .serviceItem .serviceIcon {
@@ -85,7 +98,7 @@
 }
 
 .serviceItem:hover .IconColor {
-    color: var(--surface-color);
+    color: var(--primary-color);
 }
 
 .serviceItem h5,
