@@ -9,7 +9,7 @@ import Navbar from "@/components/NavBar/NavBar";
 
 export default function Home() {
   return (
-    <div className="container-xxl bg-white p-0">
+    <div className="container-xxl p-0" style={{backgroundColor: "var(--background-color) !important"}}>
       <Navbar />
       <Hero />
       <Feature />

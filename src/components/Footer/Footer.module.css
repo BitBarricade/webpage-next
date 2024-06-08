@@ -12,6 +12,19 @@
     background-repeat: no-repeat;
 }
 
+[data-theme='dark'] .footer {
+    margin-top: 6rem;
+    padding-top: 9rem;
+    background-color: var(--primary-color) !important;
+    background:
+        url(/img/bg-black-top.png),
+        url(/img/map.png);
+    background-position:
+        center top,
+        center center;
+    background-repeat: no-repeat;
+}
+
 .footer .btnSocial {
     margin-right: 5px;
     width: 40px;
