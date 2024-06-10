@@ -55,21 +55,81 @@ const Navbar: React.FC = () => {
             </button>
             <div className={`navbar-collapse ${isNavOpen ? "show" : "collapse"} ${Styles.navbarCollapse}`}>
                 <div className={`navbar-nav mx-auto py-0 ${Styles.navbarNav}`}>
-                    <Link href="/" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>Home</Link>
-                    <Link href="/about" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>About</Link>
-                    <Link href="/service" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>Service</Link>
-                    <Link href="/project" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>Project</Link>
+                    <Link 
+                        href="/" 
+                        className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        Home
+                    </Link>
+                    <Link 
+                        href="/about" 
+                        className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        About
+                    </Link>
+                    <Link 
+                        href="/service" 
+                        className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        Service
+                    </Link>
+                    <Link 
+                        href="/project" 
+                        className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        Project
+                    </Link>
                     <div className={`nav-item dropdown ${Styles.navItem}`}>
-                        <Link href="#" className={`nav-link dropdown-toggle ${Styles.navLink} ${Styles.dropdownToggle} ${isSubMenuOpen ? "show" : ""}`} onClick={() => setSubMenuOpen(!isSubMenuOpen)}>Pages</Link>
+                        <Link 
+                            href="#" 
+                            className={`nav-link dropdown-toggle ${Styles.navLink} ${Styles.dropdownToggle} ${isSubMenuOpen ? "show" : ""}`} 
+                            onClick={() => setSubMenuOpen(!isSubMenuOpen)}
+                        >
+                            Pages
+                        </Link>
                         <div className={`dropdown-menu m-0 ${Styles.dropdownMenu} ${isSubMenuOpen ? "show" : ""}`}>
-                            <Link href="/team" className="dropdown-item">Our Team</Link>
-                            <Link href="/testimonial" className="dropdown-item">Testimonial</Link>
+                            <Link 
+                                href="/team" 
+                                className="dropdown-item"
+                                onClick={() => setNavOpen(false)}
+                            >
+                                Our Team
+                            </Link>
+                            <Link 
+                                href="/testimonial" 
+                                className="dropdown-item"
+                                onClick={() => setNavOpen(false)}
+                            >
+                                Testimonial
+                            </Link>
                         </div>
                     </div>
-                    <Link href="/contact" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>Contact</Link>
-                    <Link href="/login" className={`nav-item nav-link d-block d-lg-none ${Styles.navItem} ${Styles.navLink}`}>Login</Link>
+                    <Link 
+                        href="/contact" 
+                        className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        Contact
+                    </Link>
+                    <Link 
+                        href="/login" 
+                        className={`nav-item nav-link d-block d-lg-none ${Styles.navItem} ${Styles.navLink}`}
+                        onClick={() => setNavOpen(false)}
+                    >
+                        Login
+                    </Link>
                 </div>
-                <Link href="/login" className={Styles.getStarted}>Get Started</Link>
+                <Link 
+                    href="/login" 
+                    className={Styles.getStarted}
+                    onClick={() => setNavOpen(false)}
+                >
+                    Get Started
+                </Link>
                 <ThemeToggle />
             </div>
         </nav>
