@@ -125,5 +125,5 @@ h6,
 /*** Theme Fix ***/
 
 .theme-color-bg {
-  background-color: var(--background-color) !important;
+  background-color: var(--background-color);
 }

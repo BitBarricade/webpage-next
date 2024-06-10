@@ -18,7 +18,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <div className={`container-fluid bg-primary text-light ${Styles.footer}`}>
+    <div className={`container-fluid text-light ${Styles.footer}`}>
       <div className="container py-5 px-lg-5">
         <div className="row g-5">
           <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>

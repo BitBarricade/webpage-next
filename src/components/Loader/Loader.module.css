@@ -1,4 +1,5 @@
 .Spinner {
     background-color: var(--primary-color) !important;
     color: var(--surface-color) !important;
+    z-index: 9999;
 }

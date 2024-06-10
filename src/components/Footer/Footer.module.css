@@ -100,7 +100,7 @@
     align-items: center;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--white-color);
+    color: var(--white-color) !important;
 }
 
 .SectionTitle span:first-child,

@@ -3,6 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Jost } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 import FavIcon from '@/components/FavIcon';
+import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/NavBar/NavBar";
 import "@/globals/style.css";
 import "@/globals/style.scss";
 const jost = Jost({ subsets: ["latin"] });
@@ -22,8 +24,12 @@ export default function RootLayout({
       <head>
         <FavIcon />
       </head>
-      <body className={jost.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`theme-color-bg ${jost.className}`}>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
         <SpeedInsights />
       </body>
     </html>

@@ -3,7 +3,7 @@ import Loader from '@/components/Loader/Loader';
 
 const Loading: React.FC = () => {
   return (
-    <div className="theme-color-bg">
+    <div>
       <Loader />
     </div>
   );

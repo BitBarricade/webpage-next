@@ -1,10 +1,10 @@
+import React from "react";
 import LeftSection from "@/components/LeftSection";
 import LoginForm from "@/components/LoginForm";
-import React from "react";
 
 function page() {
   return (
-    <div className="theme-color-bg">
+    <div>
       <LeftSection />
       <LoginForm />
     </div>
