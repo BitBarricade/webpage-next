@@ -6,7 +6,7 @@ import Navbar from "@/components/NavBar/NavBar";
 
 export default function ServicePage() {
   return (
-    <div  style={{backgroundColor: "var(--background-color) !important"}}>
+    <div className="theme-color-bg">
       <Navbar />
       <Hero />
       <Service />

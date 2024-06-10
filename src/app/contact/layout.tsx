@@ -9,7 +9,7 @@ export const metadata = {
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <div style={{backgroundColor: "var(--background-color) !important"}}>
+    <div className="theme-color-bg">
       <Navbar />
       <main>{children}</main>
       <Footer />

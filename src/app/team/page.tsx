@@ -6,7 +6,7 @@ import Navbar from "@/components/NavBar/NavBar";
 
 const TeamPage: React.FC = () => {
   return (
-    <div style={{backgroundColor: "var(--background-color) !important"}}>
+    <div className="theme-color-bg">
       <Navbar />
       <Hero />
       <Team />

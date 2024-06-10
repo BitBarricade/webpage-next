@@ -4,7 +4,7 @@ import React from "react";
 
 function page() {
   return (
-    <div  style={{backgroundColor: "var(--background-color) !important"}}>
+    <div className="theme-color-bg">
       <LeftSection />
       <LoginForm />
     </div>

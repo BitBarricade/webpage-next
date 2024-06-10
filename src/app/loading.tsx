@@ -3,7 +3,7 @@ import Loader from '@/components/Loader/Loader';
 
 const Loading: React.FC = () => {
   return (
-    <div  style={{backgroundColor: "var(--background-color) !important"}}>
+    <div className="theme-color-bg">
       <Loader />
     </div>
   );

@@ -5,7 +5,7 @@ import Navbar from "@/components/NavBar/NavBar";
 
 const NotFoundPage: React.FC = () => {
   return (
-    <div  style={{backgroundColor: "var(--background-color) !important"}}>
+    <div className="theme-color-bg">
       <Navbar />
       <NotFound />
       <Footer />

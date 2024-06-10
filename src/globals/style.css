@@ -121,3 +121,9 @@ h6,
   font-weight: normal;
   border-radius: 50px;
 }
+
+/*** Theme Fix ***/
+
+.theme-color-bg {
+  background-color: var(--background-color) !important;
+}
