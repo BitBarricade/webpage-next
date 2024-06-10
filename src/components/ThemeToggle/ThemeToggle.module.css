@@ -1,11 +1,11 @@
 .ThemeBtn {
-    background-color: var(--background-navbar-color);
+    background-color: var(--background-navbar-color) !important;
     visibility: visible;
     font-weight: bold;
-    box-shadow: 0 0 10px var(--text-color2) !important;
+    box-shadow: 0 0 10px var(--secondary-color) !important;
     transition: 0.5s;
 }
 
 .ThemeBtn:hover {
-    background-color: var(--navbar-color);
+    background-color: var(--navbar-color) !important;
 }

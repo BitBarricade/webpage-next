@@ -27,12 +27,12 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <nav className={`navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 ${isSticky ? Styles.stickyTop + " shadow-sm": ""} ${Styles.navbarLight} ${Styles.navbar}`}>
+        <nav className={`navbar navbar-expand-lg px-4 px-lg-5 py-3 py-lg-0 ${isSticky ? Styles.stickyTop + " shadow-sm": ""} ${Styles.navbarLight} ${Styles.navbar}`}>
             <Link href="/" className={`navbar-brand p-0 ${Styles.navbarBrand}`}>
                 <h1 className="m-0">DGital</h1>
                 {/* <!-- <img src="img/logo.png" alt="Logo"> --> */}
             </Link>
-            <button className={`navbar-toggler ${!isNavOpen ? "collapsed" : ""}`} type="button" onClick={() => setNavOpen(!isNavOpen)}>
+            <button className={`navbar-toggler ${Styles.Toggler} ${!isNavOpen ? "collapsed" : ""}`} type="button" onClick={() => setNavOpen(!isNavOpen)}>
                 <span className="fa fa-bars">
                     <svg
                         className="h-6 w-6"
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
                     </div>
                     <Link href="/contact" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>Contact</Link>
                 </div>
-                <Link href="/login" className={`btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block ${Styles.getStarted}`}>Get Started</Link>
+                <Link href="/login" className={Styles.getStarted}>Get Started</Link>
                 <ThemeToggle />
             </div>
         </nav>

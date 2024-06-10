@@ -1,8 +1,11 @@
-
 /*** Navbar ***/
 .navbar .dropdownToggle::after {
     border: none;
     content: "";
+}
+
+.navbarLight {
+    background-color: var(--primary-color);
 }
 
 .navbarLight .navbarNav .navLink {
@@ -43,6 +46,16 @@
     max-height: 45px;
 }
 
+.Toggler {
+    color: var(--navbar-color) !important;
+    border: 1px solid var(--navbar-color) !important;
+    border-radius: 10px !important;
+}
+
+.Toggler:focus {
+    border: 1.1px solid var(--background-navbar-color) !important;
+}
+
 @media (max-width: 991.98px) {
     .stickyTop.navbarLight {
         position: relative;
@@ -76,7 +89,7 @@
 
 @media (min-width: 992px) {
     .navbarLight {
-        position: absolute;
+        position: absolute !important;
         width: 100%;
         top: 0;
         left: 0;
@@ -84,9 +97,9 @@
         z-index: 999;
         transition: .5s;
     }
-    
+
     .stickyTop.navbarLight {
-        position: fixed;
+        position: fixed !important;
         background: var(--background-navbar-color);
         -webkit-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
@@ -129,12 +142,31 @@
 .getStarted {
     color: var(--navbar-color);
     background-color: var(--accent-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border-radius: 50rem;
+    margin-left: 1rem;
+    display: none;
     visibility: visible;
     font-weight: bold;
     transition: .5s;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    text-wrap: nowrap;
 }
 
-.getStarted:hover, .getStarted:active {
+@media (min-width: 992px) {
+    .getStarted {
+        display: block;
+    }
+}
+
+.getStarted:hover,
+.getStarted:active {
     color: var(--accent-color) !important;
     background-color: var(--navbar-color) !important;
 }

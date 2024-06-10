@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faPaperPlane}
-                  className="text-primary fs-4"
+                  style={{width: "1.5em", display: "inline", color: "var(--primary-color)"}}
                 />
               </button>
             </div>
