@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import Styles from './NavBar.module.css';
@@ -30,7 +31,13 @@ const Navbar: React.FC = () => {
         <nav className={`navbar navbar-expand-lg px-4 px-lg-5 py-3 py-lg-0 ${isSticky ? Styles.stickyTop + " shadow-sm": ""} ${Styles.navbarLight} ${Styles.navbar}`}>
             <Link href="/" className={`navbar-brand p-0 ${Styles.navbarBrand}`}>
                 <h1 className="m-0">DGital</h1>
-                {/* <!-- <img src="img/logo.png" alt="Logo"> --> */}
+                {/* <Image 
+                    src="/img/logo/icon.nobg.png" 
+                    className="img-fluid flex-shrink-0"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                />  */}
             </Link>
             <button className={`navbar-toggler ${Styles.Toggler} ${!isNavOpen ? "collapsed" : ""}`} type="button" onClick={() => setNavOpen(!isNavOpen)}>
                 <span className="fa fa-bars">
