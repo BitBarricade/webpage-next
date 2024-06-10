@@ -1,5 +1,5 @@
 import React from "react";
-import TestimonialItem from "./TestimonialItem";
+import TestimonialItem from "./Item/Item";
 
 const testimonials = [
   {

@@ -1,5 +1,5 @@
 import React from "react";
-import TeamMember from "./TeamMember";
+import TeamMember from "./Member/Member";
 
 const teamMembers = [
   { name: "John Doe", position: "CEO & Founder", image: "/img/team-1.jpg" },

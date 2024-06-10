@@ -1,0 +1,73 @@
+/*** Section Title ***/
+.SectionTitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 30px;
+    height: 2px;
+}
+
+.SectionTitle span:last-child {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    top: 0;
+    right: -20px;
+}
+
+.SectionTitle span:last-child::after {
+    right: auto;
+    left: -20px;
+}
+
+.SectionTitle span:first-child,
+.SectionTitle span:last-child,
+.SectionTitle span:first-child::after,
+.SectionTitle span:last-child::after {
+    background: var(--accent-color);
+}
+
+.Title {
+    color: var(--text-color);
+}
+
+.Button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.Button:hover, .Button:active {
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+}
+
+.FormText, .FormText:focus {
+    color: var(--secondary-color);
+    background-color: var(--card-bg-color);
+    border-color: var(--border-color);
+}
+
+.FormTextLabel {
+    color: var(--secondary-color) !important;
+}
+
+.FormText:focus ~ .FormTextLabel::after {
+    background-color: transparent !important;
+}

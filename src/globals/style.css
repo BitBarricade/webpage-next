@@ -8,6 +8,7 @@
 
 :root {
   --primary-color: #6222CC;
+  --primary-color-faded: rgba(98, 34, 204, 0.5);
   --secondary-color: #6C757D;
   --background-color: #FFFFFF;
   --card-bg-color: #f8f9fa;
@@ -28,6 +29,7 @@
 
 [data-theme='dark'] {
   --primary-color: #44046e;
+  --primary-color-faded: rgba(68, 4, 110, 0.5);
   --secondary-color: #A9A9A9;
   --background-color: #272525;
   --card-bg-color: #2b2929;

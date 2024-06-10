@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaEye, FaLink } from "react-icons/fa";
+import Styles from "./ProjectList.module.css";
 
 const projects = [
   {
@@ -45,59 +46,59 @@ const ProjectList: React.FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container py-5 px-lg-5">
-        <div className="animate-slideInDown">
-          <p className="section-title text-secondary justify-content-center">
+        <div className="animate">
+          <p className={`justify-content-center ${Styles.SectionTitle}`}>
             <span></span>Our Projects<span></span>
           </p>
-          <h1 className="text-center mb-5">Recently Completed Projects</h1>
+          <h1 className={`text-center mb-5 ${Styles.Title}`}>Recently Completed Projects</h1>
         </div>
-        <div className="row mt-n2 animate-slideInDown">
+        <div className="row mt-n2 animate">
           <div className="col-12 text-center">
-            <ul className="list-inline mb-5" id="portfolio-flters">
-              <li className="mx-2 active" data-filter="*">
+            <ul className={`list-inline mb-5 ${Styles.portfolioFlters}`}>
+              <li className="mx-2 active">
                 All
               </li>
-              <li className="mx-2" data-filter=".first">
+              <li className="mx-2">
                 Web Design
               </li>
-              <li className="mx-2" data-filter=".second">
+              <li className="mx-2">
                 Graphic Design
               </li>
             </ul>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 portfolio-container">
+        <div className={`row g-4 ${Styles.PortfolioContainer}`}>
           {projects.map((project) => (
-            <div key={project.id} className="portfolio-item animate-zoomIn">
+            <div key={project.id} className={`col-lg-4 col-md-6 ${Styles.portfolioItem}`}>
               <div className="rounded overflow-hidden shadow-lg">
-                <div className="relative overflow-hidden">
+                <div className="position-relative overflow-hidden">
                   <Image
-                    className="w-full"
+                    className="img-fluid w-100"
                     src={project.image}
                     alt={project.title}
                     width={500}
                     height={500}
                   />
-                  <div className="portfolio-overlay absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <div className={Styles.portfolioOverlay}>
                     <a
                       href={project.image}
                       className="btn btn-square btn-outline-light mx-1"
                     >
-                      <FaEye />
+                      <FaEye style={{display: "inline"}}/>
                     </a>
                     <a
                       href="#"
                       className="btn btn-square btn-outline-light mx-1"
                     >
-                      <FaLink />
+                      <FaLink style={{display: "inline"}}/>
                     </a>
                   </div>
                 </div>
-                <div className="bg-light p-4">
-                  <p className="text-primary fw-medium mb-2">
+                <div className={`p-4 ${Styles.CardBg}`}>
+                  <p className={`fw-medium mb-2 ${Styles.CardCategory}`}>
                     {project.category}
                   </p>
-                  <h5 className="lh-base mb-0">{project.title}</h5>
+                  <h5 className={`lh-base mb-0 ${Styles.CardText}`}>{project.title}</h5>
                 </div>
               </div>
             </div>

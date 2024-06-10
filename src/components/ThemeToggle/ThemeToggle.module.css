@@ -1,6 +1,5 @@
 .ThemeBtn {
-    color: var(--text-color);
-    background-color: var(--navbar-color);
+    background-color: var(--background-navbar-color);
     visibility: visible;
     font-weight: bold;
     box-shadow: 0 0 10px var(--text-color2) !important;
@@ -8,6 +7,5 @@
 }
 
 .ThemeBtn:hover {
-    color: var(--text-color);
-    background-color: var(--card-bg-color);
+    background-color: var(--navbar-color);
 }
