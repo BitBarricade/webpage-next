@@ -67,6 +67,7 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
                     <Link href="/contact" className={`nav-item nav-link ${Styles.navItem} ${Styles.navLink}`}>Contact</Link>
+                    <Link href="/login" className={`nav-item nav-link d-block d-lg-none ${Styles.navItem} ${Styles.navLink}`}>Login</Link>
                 </div>
                 <Link href="/login" className={Styles.getStarted}>Get Started</Link>
                 <ThemeToggle />
