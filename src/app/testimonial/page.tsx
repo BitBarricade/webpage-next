@@ -6,7 +6,7 @@ import Navbar from "@/components/NavBar/NavBar";
 
 const TestimonialPage: React.FC = () => {
   return (
-    <div>
+    <div  style={{backgroundColor: "var(--background-color) !important"}}>
       <Navbar />
       <Hero />
       <TestimonialList />

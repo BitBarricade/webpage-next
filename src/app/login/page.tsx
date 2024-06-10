@@ -4,10 +4,10 @@ import React from "react";
 
 function page() {
   return (
-    <>
+    <div  style={{backgroundColor: "var(--background-color) !important"}}>
       <LeftSection />
       <LoginForm />
-    </>
+    </div>
   );
 }
 

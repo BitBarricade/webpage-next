@@ -9,7 +9,7 @@ import Navbar from "@/components/NavBar/NavBar";
 
 const AboutPage: React.FC = () => {
   return (
-    <div>
+    <div  style={{backgroundColor: "var(--background-color) !important"}}>
       <Navbar />
       <Hero />
       <Feature />

@@ -16,9 +16,9 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
   profession,
 }) => {
   return (
-    <div className="testimonial-item bg-light rounded my-4 p-4 shadow-lg">
+    <div className="testimonial-item rounded my-4 p-4 shadow-lg" style={{backgroundColor: "var(--card-bg-color)"}}>
       <p className="fs-5 flex items-center">
-        <FaQuoteLeft className="fa-4x text-primary mt-n4 me-3" />
+        <FaQuoteLeft className="fa-4x mt-n4 me-3"/>
         {text}
       </p>
       <div className="d-flex align-items-center">
@@ -30,7 +30,7 @@ const TestimonialItem: React.FC<TestimonialItemProps> = ({
           height={65}
         />
         <div className="ps-4">
-          <h5 className="mb-1">{name}</h5>
+          <h5 className="mb-1" style={{color: "var(--text-color)"}}>{name}</h5>
           <span>{profession}</span>
         </div>
       </div>

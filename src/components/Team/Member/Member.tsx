@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import Styles from "./Member.module.css";
 
 interface TeamMemberProps {
   name: string;
@@ -15,30 +16,30 @@ interface TeamMemberProps {
 
 const TeamMember: React.FC<TeamMemberProps> = ({ name, position, image }) => {
   return (
-    <div className="team-item bg-light rounded shadow-lg">
-      <div className="text-center border-b p-4">
+    <div className={`rounded shadow-lg ${Styles.teamItem}`}>
+      <div className={`text-center p-4 ${Styles.teamBox}`}>
         <Image
-          className="img-fluid rounded-full mb-4"
+          className="img-fluid rounded-circle mb-4 m-auto"
           src={image}
           alt={name}
-          width={150}
-          height={150}
+          width={180}
+          height={180}
         />
         <h5>{name}</h5>
         <span>{position}</span>
       </div>
-      <div className="d-flex justify-center p-4">
-        <a className="btn btn-square mx-1" href="#">
-          <FaFacebookF />
+      <div className="d-flex justify-content-center p-4">
+        <a className={`btn btn-square mx-1 shadow ${Styles.btn}`} href="#">
+          <FaFacebookF style={{width: "1em", display: "inline", margin: "auto"}}/>
         </a>
-        <a className="btn btn-square mx-1" href="#">
-          <FaTwitter />
+        <a className={`btn btn-square mx-1 shadow ${Styles.btn}`} href="#">
+          <FaTwitter style={{width: "1em", display: "inline", margin: "auto"}}/>
         </a>
-        <a className="btn btn-square mx-1" href="#">
-          <FaInstagram />
+        <a className={`btn btn-square mx-1 shadow ${Styles.btn}`} href="#">
+          <FaInstagram style={{width: "1em", display: "inline", margin: "auto"}}/>
         </a>
-        <a className="btn btn-square mx-1" href="#">
-          <FaLinkedinIn />
+        <a className={`btn btn-square mx-1 shadow ${Styles.btn}`} href="#">
+          <FaLinkedinIn style={{width: "1em", display: "inline", margin: "auto"}}/>
         </a>
       </div>
     </div>
