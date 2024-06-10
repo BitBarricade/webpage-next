@@ -1,11 +1,9 @@
 import React from "react";
-import NotFound from "@/components/NotFound";
+import NotFound from "@/components/404/NotFound";
 
 const NotFoundPage: React.FC = () => {
   return (
-    <div>
-      <NotFound />
-    </div>
+    <NotFound />
   );
 };
 

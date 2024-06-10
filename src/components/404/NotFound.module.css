@@ -1,0 +1,31 @@
+
+.NotFoundIcon {
+    color: var(--primary-color);
+    font-size: calc(1.625rem + 4.5vw);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.NotFoundTitle {
+    color: var(--text-color);
+    font-size: calc(1.625rem + 4.5vw);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.NotFoundTitleSm {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.Button {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    font-weight: 700;
+    text-wrap: nowrap;
+}
+.Button:hover, .Button:active {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--secondary-color) !important;
+}
