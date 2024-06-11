@@ -4,6 +4,7 @@ import Feature from "@/components/Feature/Feature";
 import Facts from "@/components/Facts/Facts";
 import Service from "@/components/Service/Service";
 import Newsletter from "@/components/Newsletter/Newsletter";
+import Team from "@/components/Team/Team";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Facts />
       <Service />
       <Newsletter />
+      <Team />
     </div>
   );
 }
