@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Styles from "./Contact.module.css";
@@ -15,13 +16,21 @@ const ContactForm = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container py-5 px-lg-5">
-        <div className="animate">
+        <motion.div
+          initial={{ opacity: 0, y: 150, scale: 0.5}}
+          whileInView={{opacity: 1, y: 0, scale: 1}}
+          transition={{ duration: 0.8 }}
+        >
           <p className={`justify-content-center ${Styles.SectionTitle}`}><span></span>Contact Us<span></span></p>
           <h1 className={`text-center mb-5 ${Styles.Title}`}>Contact For Any Query</h1>
-        </div>
+        </motion.div>
         <div className="row justify-content-center">
           <div className="col-lg-7">
-            <div className="animate">
+            <motion.div
+              initial={{ opacity: 0, y: 150, scale: 0.5}}
+              whileInView={{opacity: 1, y: 0, scale: 1}}
+              transition={{ duration: 1 }}
+            >
               <Formik
                 initialValues={{
                   name: "",
@@ -118,7 +127,7 @@ const ContactForm = () => {
                   </Form>
                 )}
               </Formik>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

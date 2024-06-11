@@ -1,4 +1,6 @@
+'use client';
 import React from "react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
@@ -6,10 +8,20 @@ import Styles from "./Newsletter.module.css";
 
 const Newsletter: React.FC = () => {
   return (
-    <div className={`container-xxl py-5 ${Styles.newsLetter}`}>
+    <motion.div 
+      className={`container-xxl py-5 ${Styles.newsLetter}`}
+      initial={{opacity: 0, y: 80}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{duration: 0.5}}
+    >
       <div className="container py-5 px-lg-5">
         <div className="row justify-content-center">
-          <div className="col-lg-7 text-center">
+          <motion.div 
+            className="col-lg-7 text-center"
+            initial={{opacity: 0, scale: 0.50}}
+            whileInView={{opacity: 1, scale: 1}}
+            transition={{duration: 0.7}}
+          >
 
             <p className={`justify-content-center ${Styles.SectionTitle}`}>
               <span></span>Newsletter<span></span>
@@ -34,14 +46,14 @@ const Newsletter: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faPaperPlane}
-                  style={{width: "1.5em", display: "inline", color: "var(--primary-color)"}}
+                  style={{height: "auto", width: "1.5em", display: "inline", color: "var(--primary-color)"}}
                 />
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

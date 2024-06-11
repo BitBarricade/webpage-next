@@ -26,6 +26,14 @@
 .TextColor {
     color: var(--white-color) !important;
 }
+
+.FontAwesomeIcon {
+    margin-bottom: 0.5rem;
+    height: "auto";
+    width: "4em";
+    display: "inline";
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;

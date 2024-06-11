@@ -1,7 +1,9 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Styles from "./Footer.module.css";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -18,10 +20,20 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <div className={`container-fluid text-light ${Styles.footer}`}>
+    <motion.div 
+      className={`container-fluid text-light ${Styles.footer}`}
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      transition={{duration: 0.5}}
+    >
       <div className="container py-5 px-lg-5">
         <div className="row g-5">
-          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+          <motion.div 
+            className={`col-md-6 col-lg-3 ${Styles.Color}`}
+            initial={{ opacity: 0, y: 150, scale: 0.5}}
+            whileInView={{opacity: 1, y: 0, scale: 1}}
+            transition={{ duration: 0.5 }}
+          >
             <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Address<span></span></p>
             <p>
               <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" style={{width: "1em", display: "inline"}}/>
@@ -49,8 +61,13 @@ const Footer: React.FC = () => {
                 <FontAwesomeIcon icon={faLinkedinIn} style={{width: "1em", display: "inline"}}/>
               </a>
             </div>
-          </div>
-          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+          </motion.div>
+          <motion.div 
+            className={`col-md-6 col-lg-3 ${Styles.Color}`}
+            initial={{ opacity: 0, y: 150, scale: 0.5}}
+            whileInView={{opacity: 1, y: 0, scale: 1}}
+            transition={{ duration: 0.7 }}
+          >
             <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Quick Link<span></span></p>
             <Link href="/about" className={`btn ${Styles.btnLink}`}>
               About Us
@@ -67,8 +84,13 @@ const Footer: React.FC = () => {
             <Link href="/career" className={`btn ${Styles.btnLink}`}>
               Career
             </Link>
-          </div>
-          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+          </motion.div>
+          <motion.div 
+            className={`col-md-6 col-lg-3 ${Styles.Color}`}
+            initial={{ opacity: 0, y: 150, scale: 0.5}}
+            whileInView={{opacity: 1, y: 0, scale: 1}}
+            transition={{ duration: 0.9 }}
+          >
             <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Gallery<span></span></p>
             <div className="grid grid-cols-3 gap-2">
               <Image
@@ -114,8 +136,13 @@ const Footer: React.FC = () => {
                 height={100}
               />
             </div>
-          </div>
-          <div className={`col-md-6 col-lg-3 ${Styles.Color}`}>
+          </motion.div>
+          <motion.div 
+            className={`col-md-6 col-lg-3 ${Styles.Color}`}
+            initial={{ opacity: 0, y: 150, scale: 0.5}}
+            whileInView={{opacity: 1, y: 0, scale: 1}}
+            transition={{ duration: 1.1 }}
+          >
             <p className={`h5 mb-4 ${Styles.SectionTitle}`}>Newsletter<span></span></p>
             <p>
               Feeling Lost in the Digital Jungle? We&apos;re Your Guide!
@@ -134,13 +161,18 @@ const Footer: React.FC = () => {
               >
                 <FontAwesomeIcon
                   icon={faPaperPlane}
-                  style={{width: "1.5em", display: "inline", color: "var(--primary-color)"}}
+                  style={{height: "auto", width: "1.5em", display: "inline", color: "var(--primary-color)"}}
                 />
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="container px-lg-5">
+        <motion.div 
+          className="container px-lg-5"
+          initial={{ opacity: 0, y: 50, scale: 0.5}}
+          whileInView={{opacity: 1, y: 0, scale: 1}}
+          transition={{ duration: 1 }}
+        >
           <div className={Styles.copyright}>
             <div className="row">
               <div className={`col-md-6 text-center text-md-start mb-3 mb-md-0 ${Styles.Color}`}>
@@ -172,9 +204,9 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

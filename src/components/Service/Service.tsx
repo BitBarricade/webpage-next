@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +9,7 @@ import {
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { faAndroid, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Styles from "./Service.module.css";
 
@@ -57,35 +59,43 @@ const Service: React.FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container py-5 px-lg-5">
-        <div className="text-center">
+        <motion.div 
+          className="text-center"
+          initial={{opacity: 0, y: 150}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.5}}
+        >
           <p className={`justify-content-center ${Styles.SectionTitle}`}>
             <span></span>Our Services<span></span>
           </p>
           <h1 className={`text-center mb-5 ${Styles.Header}`}>
             What Solutions We Provide
           </h1>
-        </div>
+        </motion.div>
         <div className="row g-4">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
               className="col-lg-4 col-md-6"
+              initial={{opacity: 0, y: 150}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: index/10+0.1}}
             >
               <div className={`d-flex flex-column text-center rounded ${Styles.serviceItem}`}>
                 <div className={`flex-shrink-0 ${Styles.serviceIcon}`}>
                   <FontAwesomeIcon
                     icon={service.icon}
                     className={`mb4 ${Styles.IconColor}`}
-                    style={{width: "2em", display: "inline"}}
+                    style={{height: "auto", width: "2em", display: "inline"}}
                   />
                 </div>
                 <h5 className={`mb-3 ${Styles.Title}`}>{service.title}</h5>
                 <p className="m-0">{service.description}</p>
                 <Link href={service.link} className={`btn btn-square ${Styles.KnowMore}`}>
-                  <FontAwesomeIcon icon={faArrowRight} style={{width: "1em", display: "inline"}}/>
+                  <FontAwesomeIcon icon={faArrowRight} style={{height: "auto", width: "1em", display: "inline"}}/>
                 </Link>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

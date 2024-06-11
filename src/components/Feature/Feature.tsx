@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -5,6 +6,7 @@ import {
   faSearch,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 import Styles from "./Feature.module.css";
 
 const features = [
@@ -34,22 +36,25 @@ const Feature: React.FC = () => {
       <div className="container py-5 px-lg-5">
         <div className="row g-4">
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
               className={`col-lg-4 ${Styles.fadeInUp}`}
+              initial={{opacity: 0, y: 150, scale: 0.50}}
+              whileInView={{opacity: 1, y:0, scale: 1}}
+              transition={{duration: index/10}}
             >
               <div className={`rounded text-center p-4 ${Styles.featureItem}`}>
                 <FontAwesomeIcon
                   icon={feature.icon}
                   className={`mb-4 ${Styles.IconColor}`}
-                  style={{width: "4em", display: "inline"}}
+                  style={{height: "auto", width: "4em", display: "inline"}}
                 />
                 <h5 className={`mb-3 ${Styles.Title}`}>{feature.title}</h5>
                 <p className={`m-0 ${Styles.Description}`}>
                   {feature.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

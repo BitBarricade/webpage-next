@@ -1,5 +1,7 @@
+'use client';
 import React from "react";
 import TeamMember from "./Member/Member";
+import { motion } from "framer-motion";
 import Styles from "./Team.module.css";
 
 const teamMembers = [
@@ -15,21 +17,31 @@ const Team: React.FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container py-5 px-lg-5">
-        <div className="animate">
+        <motion.div
+          initial={{opacity: 0, y: 150}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.5}}
+        >
           <p className={`justify-content-center ${Styles.SectionTitle}`}>
             <span></span>Our Team<span></span>
           </p>
           <h1 className={`text-center mb-5 ${Styles.Title}`}>Our Team Members</h1>
-        </div>
+        </motion.div>
         <div className="row g-4">
           {teamMembers.map((member, index) => (
-            <div key={index} className="col-lg-4 col-md-6 animate">
+            <motion.div 
+              key={index} 
+              className="col-lg-4 col-md-6"
+              initial={{opacity: 0, y: 100}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.8}}
+            >
               <TeamMember
                 name={member.name}
                 position={member.position}
                 image={member.image}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

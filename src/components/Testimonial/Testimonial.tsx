@@ -1,5 +1,7 @@
+'use client';
 import React from "react";
 import TestimonialItem from "./Item/Item";
+import { motion } from "framer-motion";
 import Styles from "./Testimonial.module.css";
 
 const testimonials = [
@@ -27,19 +29,32 @@ const TestimonialList: React.FC = () => {
   return (
     <div className="container-xxl py-5 animate">
       <div className="container py-5 px-lg-5">
-        <p className={`justify-content-center ${Styles.SectionTitle}`}>
-          <span></span>Testimonial<span></span>
-        </p>
-        <h1 className={`text-center mb-5 ${Styles.Title}`}>What Say Our Clients!</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <motion.div
+          initial={{opacity: 0, y: 150}}
+          whileInView={{opacity: 1, y: 0}}
+          transition={{duration: 0.5}}
+        >
+          <p className={`justify-content-center ${Styles.SectionTitle}`}>
+            <span></span>Testimonial<span></span>
+          </p>
+          <h1 className={`text-center mb-5 ${Styles.Title}`}>What Say Our Clients!</h1>
+        </motion.div>
+        <div className="row g-4">
           {testimonials.map((testimonial, index) => (
-            <TestimonialItem
+            <motion.div 
               key={index}
-              text={testimonial.text}
-              image={testimonial.image}
-              name={testimonial.name}
-              profession={testimonial.profession}
-            />
+              className="col-lg-4 col-md-6"
+              initial={{opacity: 0, y: 100}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.8}}
+            >
+              <TestimonialItem
+                text={testimonial.text}
+                image={testimonial.image}
+                name={testimonial.name}
+                profession={testimonial.profession}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
