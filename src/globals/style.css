@@ -1,8 +1,8 @@
-/* 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
-*/
+
 
 /*@media (prefers-color-scheme: dark) {
 
@@ -60,13 +60,13 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
-/* 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 } 
-*/
+
 
 
 /*** Heading ***/
