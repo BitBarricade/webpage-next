@@ -132,3 +132,38 @@
 .serviceItem:hover .KnowMore {
     bottom: 0;
 }
+
+@media (min-width: 1200px) {
+    .SectionTitle {
+        font-size: 1.2vw;
+    }
+
+    .Header {
+        font-size: 2vw;
+    }
+
+    .serviceItem {
+        font-size: 1vw;
+    }
+
+    .serviceItem p {
+        font-size: 1.2vw;
+    }
+
+    .Title {
+        font-size: 1.5vw;
+    }
+
+    .serviceIcon {
+        width: 6vw !important;
+        height: 7vw !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .KnowMore {
+        width: 2vw;
+        height: 1.7vw;
+        font-size: 1vw;
+    }
+}

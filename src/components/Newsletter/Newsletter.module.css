@@ -63,6 +63,24 @@
     background: var(--accent-color);
 }
 
+.Title {
+    color: var(--white-color);
+}
+
 .Color {
     color: var(--white-color);
+}
+
+@media (min-width: 1200px) {
+    .SectionTitle {
+        font-size: 1.2vw;
+    }
+
+    .Title {
+        font-size: 2vw;
+    }
+
+    .Color {
+        font-size: 1vw;
+    }
 }

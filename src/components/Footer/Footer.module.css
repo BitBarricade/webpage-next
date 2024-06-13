@@ -9,6 +9,7 @@
     background-position:
         center top,
         center center;
+    background-size: contain, auto;
     background-repeat: no-repeat;
 }
 
@@ -22,6 +23,7 @@
     background-position:
         center top,
         center center;
+    background-size: contain, auto;
     background-repeat: no-repeat;
 }
 
@@ -87,7 +89,7 @@
     padding-right: 0;
     border-right: none;
 }
-
+ 
 .footer .copyright a:hover,
 .footer .footerMenu a:hover {
     color: var(--white-color);
@@ -141,4 +143,17 @@
 
 .Color {
     color: var(--white-color);
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        margin-top: 6vw;
+        padding-top: 9vw;
+    }
+    .SectionTitle {
+        font-size: 1.2vw;
+    }
+    .Color {
+        font-size: 1vw;
+    }
 }

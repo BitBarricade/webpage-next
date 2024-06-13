@@ -9,3 +9,16 @@
 .ThemeBtn:hover {
     background-color: var(--navbar-color) !important;
 }
+
+.IconSvg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media (min-width: 1200px)
+{
+    .IconSvg {
+        width: 2.3vw;
+        height: 2.3vw;
+    }
+}

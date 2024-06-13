@@ -17,7 +17,7 @@ const ThemeToggle: React.FC = () => {
       {theme === "dark" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-yellow-500"
+          className={`text-yellow-500 ${Styles.IconSvg}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -32,7 +32,7 @@ const ThemeToggle: React.FC = () => {
       ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-900"
+          className={`text-gray-900 ${Styles.IconSvg}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

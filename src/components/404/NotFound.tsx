@@ -13,7 +13,7 @@ const NotFound: React.FC = () => {
       <div className="container py-5 px-lg-5 text-center">
         <div className="row justify-content-center py-2">
           <motion.div 
-            className="col-lg-6"
+            className="col-lg-6 py-xxl-5"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

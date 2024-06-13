@@ -58,7 +58,7 @@
     color: var(--white-color) !important;
 }
 
-.FormText, .FormText:focus {
+.FormText, .FormText:focus, .FormText:not(:placeholder-shown) {
     color: var(--secondary-color);
     background-color: var(--card-bg-color);
     border-color: var(--border-color);
@@ -68,6 +68,17 @@
     color: var(--secondary-color) !important;
 }
 
-.FormText:focus ~ .FormTextLabel::after {
+.FormText:focus ~ .FormTextLabel::after, .FormText:not(:placeholder-shown) ~ .FormTextLabel::after {
     background-color: transparent !important;
+}
+
+@media (min-width: 1200px) {
+    .SectionTitle {
+        font-size: 1.2vw;
+    }
+
+    .Title {
+        font-size: 2vw;
+    }
+
 }

@@ -37,3 +37,25 @@
 .Title, .Description {
     color: var(--text-color) !important;
 }
+
+@media (min-width: 920px)
+{
+    .featureItem {
+        font-size: 1.3vw;
+    }
+
+    .Title {
+        font-size: 2.1vw;
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .featureItem {
+        font-size: 1.2vw;
+    }
+
+    .Title {
+        font-size: 2vw;
+    }
+}

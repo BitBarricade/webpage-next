@@ -25,7 +25,7 @@ const ContactForm = () => {
           <h1 className={`text-center mb-5 ${Styles.Title}`}>Contact For Any Query</h1>
         </motion.div>
         <div className="row justify-content-center">
-          <div className="col-lg-7">
+          <div className="col-lg-7 col-xl-6 col-xxl-4">
             <motion.div
               initial={{ opacity: 0, y: 150, scale: 0.5}}
               whileInView={{opacity: 1, y: 0, scale: 1}}

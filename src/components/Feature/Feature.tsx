@@ -33,7 +33,7 @@ const features = [
 const Feature: React.FC = () => {
   return (
     <div className="container-xxl py-5">
-      <div className="container py-5 px-lg-5">
+      <div className="container py-5 px-lg-5 w-xxl-75">
         <div className="row g-4">
           {features.map((feature, index) => (
             <motion.div

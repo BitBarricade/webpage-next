@@ -67,9 +67,9 @@ const ProjectList: React.FC = () => {
             </ul>
           </div>
         </div>
-        <div className={`row g-4 ${Styles.PortfolioContainer}`}>
+        <div className={`row px-xxl-5 g-4 ${Styles.PortfolioContainer}`}>
           {projects.map((project) => (
-            <div key={project.id} className={`col-lg-4 col-md-6 ${Styles.portfolioItem}`}>
+            <div key={project.id} className={`col-lg-4 col-xxl-3 col-xl-4 col-md-6 ${Styles.portfolioItem}`}>
               <div className="rounded overflow-hidden shadow-lg">
                 <div className="position-relative overflow-hidden">
                   <Image

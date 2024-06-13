@@ -68,6 +68,8 @@
 .PortfolioContainer {
     position: relative;
     height: 865.594px;
+    overflow: auto;
+    scrollbar-width: none;
 }
 
 .portfolioItem img {
@@ -108,3 +110,25 @@
 .CardText {
     color: var(--text-color);
 }
+
+@media (min-width: 1200px) {
+    .SectionTitle {
+        font-size: 1.2vw;
+    }
+
+    .Title {
+        font-size: 2vw;
+    }
+
+    .portfolioFlters li {
+        font-size: 1vw;
+    }
+
+    .CardCategory {
+        font-size: 1.5vw;
+    }
+
+    .CardText {
+        font-size: 1.3vw;
+    }
+} 

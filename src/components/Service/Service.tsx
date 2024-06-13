@@ -58,7 +58,7 @@ const services = [
 const Service: React.FC = () => {
   return (
     <div className="container-xxl py-5">
-      <div className="container py-5 px-lg-5">
+      <div className="container py-5 px-lg-5 w-xxl-75">
         <motion.div 
           className="text-center"
           initial={{opacity: 0, y: 150}}

@@ -26,8 +26,8 @@ const Footer: React.FC = () => {
       whileInView={{opacity: 1}}
       transition={{duration: 0.5}}
     >
-      <div className="container py-5 px-lg-5">
-        <div className="row g-5">
+      <div className="container py-5 px-lg-5 pt-xl-5">
+        <div className="row g-5 py-xl-5">
           <motion.div 
             className={`col-md-6 col-lg-3 ${Styles.Color}`}
             initial={{ opacity: 0, y: 150, scale: 0.5}}

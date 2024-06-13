@@ -12,7 +12,12 @@
         left 0px top 0px,
         right 0px top 0px,
         center center,
-        center bottom;
+        center bottom 0px;
+    background-size: 
+        auto, 
+        auto, 
+        auto, 
+        contain;
     background-repeat: no-repeat;
     background-color: var(--primary-color) !important;
     transition: background-color 0.3s;
@@ -30,7 +35,12 @@
         left 0px top 0px,
         right 0px top 0px,
         center center,
-        center bottom;
+        center bottom 0px;
+    background-size: 
+        auto, 
+        auto, 
+        auto, 
+        contain;
     background-repeat: no-repeat;
     background-color: var(--primary-color) !important;
     transition: background-color 0.3s;
@@ -135,4 +145,19 @@
     50% {
         opacity: 1;
     }
+}
+
+@media (min-width: 1200px)
+{
+ .TextLg {
+    font-size: 4vw;
+ }
+
+ .TextSm, .ReadMore, .ContactUs { 
+    font-size: 1.6vw;
+ }
+
+ .Image {
+    width: 85%; 
+ }
 }

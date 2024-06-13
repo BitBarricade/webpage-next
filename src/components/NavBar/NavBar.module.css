@@ -158,6 +158,17 @@
     }
 }
 
+@media (min-width: 1200px)
+{
+    .navbarLight .navbarNav .navLink {
+        font-size: 1.7vw;
+    }
+
+    .navbarLight .navbarBrand h1 {
+        font-size: 4vw;
+    }
+}
+
 .getStarted {
     color: var(--navbar-color);
     background-color: var(--accent-color);
@@ -170,6 +181,7 @@
     display: none;
     visibility: visible;
     font-weight: bold;
+    font-size: 1.7vw;
     transition: .5s;
     text-align: center;
     vertical-align: middle;

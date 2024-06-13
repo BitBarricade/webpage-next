@@ -17,7 +17,7 @@ const Newsletter: React.FC = () => {
       <div className="container py-5 px-lg-5">
         <div className="row justify-content-center">
           <motion.div 
-            className="col-lg-7 text-center"
+            className="col-lg-7 col-xl-6 col-xxl-4 text-center"
             initial={{opacity: 0, scale: 0.50}}
             whileInView={{opacity: 1, scale: 1}}
             transition={{duration: 0.7}}
@@ -26,7 +26,7 @@ const Newsletter: React.FC = () => {
             <p className={`justify-content-center ${Styles.SectionTitle}`}>
               <span></span>Newsletter<span></span>
             </p>
-            <h1 className={`text-center mb-4 ${Styles.Color}`}>
+            <h1 className={`text-center mb-4 ${Styles.Title}`}>
               Stay Always In Touch
             </h1>
             <p className={`mb-4 ${Styles.Color}`}>
