@@ -47,3 +47,13 @@
 .Title {
     color: var(--text-color);
 }
+
+@media (min-width: 1200px) {
+    .SectionTitle {
+        font-size: 1.2vw;
+    }
+
+    .Title {
+        font-size: 2vw;
+    }
+}

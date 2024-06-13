@@ -28,7 +28,7 @@ const testimonials = [
 const TestimonialList: React.FC = () => {
   return (
     <div className="container-xxl py-5 animate">
-      <div className="container py-5 px-lg-5">
+      <div className="align-items-center container d-flex flex-column px-lg-5 py-5">
         <motion.div
           initial={{opacity: 0, y: 150}}
           whileInView={{opacity: 1, y: 0}}
@@ -39,7 +39,7 @@ const TestimonialList: React.FC = () => {
           </p>
           <h1 className={`text-center mb-5 ${Styles.Title}`}>What Say Our Clients!</h1>
         </motion.div>
-        <div className="row g-4">
+        <div className="row g-4 w-xxl-75">
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index}

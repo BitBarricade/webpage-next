@@ -160,7 +160,7 @@
 
 @media (min-width: 1200px)
 {
-    .navbarLight .navbarNav .navLink {
+    .navbarLight .navbarNav .navLink, .dropdownMenu {
         font-size: 1.7vw;
     }
 
