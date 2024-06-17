@@ -27,7 +27,17 @@
     border-radius: 50%;
 
     transition: 0.5s ease-in-out;
-    transform: translateY(100px), translateX(100px);
+    transform: translateY(100px) translateX(100px);
+}
+
+.BackToTop.show {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+.BackToTop.hide {
+    opacity: 0;
+    transform: translateY(100px) translateX(100px);
 }
 
 .BackToTop:hover {
@@ -36,14 +46,4 @@
 
 .BackToTop:active, .BackToTop:focus {
     box-shadow: 0 0 10px var(--surface-color);
-}
-
-.BackToTop.show {
-    opacity: 1;
-    transform: translateY(0), translateX(0);
-}
-
-.BackToTop.hide {
-    opacity: 0;
-    transform: translateY(100px) translateX(100px);
 }
