@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import FavIcon from '@/components/FavIcon';
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/NavBar/NavBar";
+import BackToTop from "@/components/BackToTop/BackToTop";
 import "@/globals/style.css";
 import "@/globals/style.scss";
 const jost = Jost({ subsets: ["latin"] });
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <BackToTop />
         </ThemeProvider>
         <SpeedInsights />
       </body>

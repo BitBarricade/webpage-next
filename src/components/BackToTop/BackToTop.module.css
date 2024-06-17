@@ -1,0 +1,49 @@
+
+/*
+* BackToTop
+*/
+
+.BackToTop {
+    position: fixed;
+    opacity: 0;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+
+    font-size: 1.25rem;
+
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 50%;
+
+    transition: 0.5s ease-in-out;
+    transform: translateY(100px), translateX(100px);
+}
+
+.BackToTop:hover {
+    transform: rotate(410deg);
+}
+
+.BackToTop:active, .BackToTop:focus {
+    box-shadow: 0 0 10px var(--surface-color);
+}
+
+.BackToTop.show {
+    opacity: 1;
+    transform: translateY(0), translateX(0);
+}
+
+.BackToTop.hide {
+    opacity: 0;
+    transform: translateY(100px) translateX(100px);
+}
