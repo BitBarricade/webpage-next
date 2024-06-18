@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Jost } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 import FavIcon from '@/components/FavIcon';
@@ -75,6 +76,7 @@ export default function RootLayout({
           <Footer />
           <BackToTop />
         </ThemeProvider>
+        <GoogleTagManager gtmId="G-04K7K9S10N" />
         <SpeedInsights />
       </body>
     </html>
