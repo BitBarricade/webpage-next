@@ -1,0 +1,112 @@
+/*** Hero Header ***/
+.heroHeader {
+    margin-bottom: 6rem;
+    padding: 18rem 0;
+    background:
+        url(/img/blob-top-left.png),
+        url(/img/blob-top-right.png),
+        url(/img/blob-center.png),
+        url(/img/bg-bottom.png);
+    background-position:
+        left 0px top 0px,
+        right 0px top 0px,
+        center center,
+        center bottom 0px;
+    background-size: 
+        auto, 
+        auto, 
+        auto, 
+        contain;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color) !important;
+    transition: background-color 0.3s;
+}
+
+[data-theme='dark'] .heroHeader {
+    margin-bottom: 6rem;
+    padding: 18rem 0;
+    background:
+        url(/img/blob-top-left.png),
+        url(/img/blob-top-right.png),
+        url(/img/blob-center.png),
+        url(/img/bg-black-bottom.png);
+    background-position:
+        left 0px top 0px,
+        right 0px top 0px,
+        center center,
+        center bottom 0px;
+    background-size: 
+        auto, 
+        auto, 
+        auto, 
+        contain;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color) !important;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 991.98px) {
+    .heroHeader {
+        padding: 6rem 0 9rem 0;
+    }
+}
+
+.TextLg {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideInDown;
+    color: var(--white-color) !important;
+    transition: color 0.3s;
+}
+
+.TextSm {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideInDown;
+    color: var(--white-color) !important;
+    transition: color 0.3s;
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+
+.Icon {
+    color: var(--primary-color);
+    font-size: calc(1.625rem + 4.5vw);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.Title {
+    color: var(--text-color);
+    font-size: calc(1.625rem + 4.5vw);
+    font-weight: 700;
+    line-height: 1.2;
+    text-wrap: nowarp;
+}
+
+.TitleSm {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.Button {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    font-weight: 700;
+    text-wrap: nowrap;
+}
+.Button:hover, .Button:active {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--secondary-color) !important;
+}

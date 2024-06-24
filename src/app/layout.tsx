@@ -23,9 +23,18 @@ export const metadata: Metadata = {
   keywords: [
     'BitBarricade', 
     'Bit Barricade', 
-    'BitBarricade.in'
+    'BitBarricade.in',
+    'BitBarricade Official',
+    'Bit Barricade Official',
+    'BitBarricade Website'
   ],
   authors: [
+    { 
+      name: 'KrishnaJith' 
+    }, 
+    { 
+      name: 'Nikhil' 
+    },
     { 
       name: 'CRZA', 
       url: "https://crza.dev"
@@ -34,16 +43,10 @@ export const metadata: Metadata = {
       name: 'RJRYT', 
       url: 'https://rjryt.github.io' 
     }, 
-    { 
-      name: 'KrishnaJith' 
-    }, 
-    { 
-      name: 'Nikhil' 
-    }
   ],
   metadataBase: new URL("https://bitbarricade.in/"),
   alternates: {
-    canonical: '/'
+    canonical: './'
   },
   openGraph: {
     title: {
