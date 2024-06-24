@@ -13,11 +13,11 @@ const jost = Jost({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Home",
+    default: "BitBarricade",
     template: "%s | BitBarricade"
   },
   description: "A digital agency comprised of intelligent and creative individuals",
-  generator: "Next. Js",
+  generator: "Next.Js",
   applicationName: "BitBarricade",
   referrer: "origin-when-cross-origin",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: {
-      default: "Home",
+      default: "BitBarricade",
       template: "%s | BitBarricade"
     },
     locale: 'en_US',
