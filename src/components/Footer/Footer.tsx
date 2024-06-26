@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
             </p>
             <p>
               <FontAwesomeIcon icon={faEnvelope} className="mr-2" style={{width: "1em", display: "inline"}}/>
-              info@example.com
+              support@bitbarricade.in
             </p>
             <div className="d-flex pt-2">
               <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
