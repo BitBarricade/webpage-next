@@ -26,11 +26,11 @@ const ContactForm = () => {
   const [status, setStatus] = useState<string>('');
   const [statusCode, setStatusCode] = useState<number>(0);
   const [isSubmitting, setSubmitting] = useState<boolean>(false);
-  const [recaptchaToken, setRecaptchaToken] = useState<string>('');
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>('');
 
   const recaptchaRef = useRef(null);
 
-  const onCaptchaChange = (token: string) => {
+  const onCaptchaChange = (token: string | null) => {
     setRecaptchaToken(token);
   };
 
