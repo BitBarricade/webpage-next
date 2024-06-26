@@ -2,6 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { motion } from "framer-motion";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { useTheme } from "@/context/ThemeContext";
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Alert } from "react-bootstrap";
 import * as Yup from "yup";
@@ -22,6 +23,8 @@ interface FormValues {
 }
 
 const ContactForm = () => {
+
+  const { theme } = useTheme();
 
   const [status, setStatus] = useState<string>('');
   const [statusCode, setStatusCode] = useState<number>(0);
@@ -103,103 +106,105 @@ const ContactForm = () => {
               >
                 {() => (
                   <Form noValidate>
-                      {statusCode != 200 && (<div className="row g-3">
-                        <div className="col-md-6">
-                          <div className="form-floating">
-                            <Field
-                              name="name"
-                              id="name"
-                              min="3"
-                              max="20"
-                              placeholder="Your Name"
-                              className={`form-control ${Styles.FormText}`}
-                            />
-                            <label htmlFor="name" className={Styles.FormTextLabel}>Your Name</label>
-                            <ErrorMessage
-                              name="name"
-                              component="div"
-                              className="text-red-500"
-                            />
-                          </div>
+                    {statusCode != 200 && (<div className="row g-3">
+                      <div className="col-md-6">
+                        <div className="form-floating">
+                          <Field
+                            name="name"
+                            id="name"
+                            min="3"
+                            max="20"
+                            placeholder="Your Name"
+                            className={`form-control ${Styles.FormText}`}
+                          />
+                          <label htmlFor="name" className={Styles.FormTextLabel}>Your Name</label>
+                          <ErrorMessage
+                            name="name"
+                            component="div"
+                            className="text-red-500"
+                          />
                         </div>
-                        <div className="col-md-6">
-                          <div className="form-floating">
-                            <Field
-                              name="email"
-                              type="email"
-                              id="email"
-                              placeholder="Your Email"
-                              className={`form-control ${Styles.FormText}`}
-                            />
-                            <label htmlFor="email" className={Styles.FormTextLabel}>Your Email</label>
-                            <ErrorMessage
-                              name="email"
-                              component="div"
-                              className="text-red-500"
-                            />
-                          </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="form-floating">
+                          <Field
+                            name="email"
+                            type="email"
+                            id="email"
+                            placeholder="Your Email"
+                            className={`form-control ${Styles.FormText}`}
+                          />
+                          <label htmlFor="email" className={Styles.FormTextLabel}>Your Email</label>
+                          <ErrorMessage
+                            name="email"
+                            component="div"
+                            className="text-red-500"
+                          />
                         </div>
-                        <div className="col-12">
-                          <div className="form-floating">
-                            <Field
-                              name="subject"
-                              id="subject"
-                              min="10"
-                              max="50"
-                              placeholder="Subject"
-                              className={`form-control ${Styles.FormText}`}
-                            />
-                            <label htmlFor="subject" className={Styles.FormTextLabel}>Subject</label>
-                            <ErrorMessage
-                              name="subject"
-                              component="div"
-                              className="text-red-500"
-                            />
-                          </div>
+                      </div>
+                      <div className="col-12">
+                        <div className="form-floating">
+                          <Field
+                            name="subject"
+                            id="subject"
+                            min="10"
+                            max="50"
+                            placeholder="Subject"
+                            className={`form-control ${Styles.FormText}`}
+                          />
+                          <label htmlFor="subject" className={Styles.FormTextLabel}>Subject</label>
+                          <ErrorMessage
+                            name="subject"
+                            component="div"
+                            className="text-red-500"
+                          />
                         </div>
-                        <div className="col-12">
-                          <div className="form-floating">
-                            <Field
-                              as="textarea"
-                              name="message"
-                              min="10"
-                              max="200"
-                              id="message"
-                              placeholder="Leave a message here"
-                              className={`form-control ${Styles.FormText}`}
-                              style={{ height: "150px" }}
-                            />
-                            <label htmlFor="message" className={Styles.FormTextLabel}>Leave a message here</label>
-                            <ErrorMessage
-                              name="message"
-                              component="div"
-                              className="text-red-500"
-                            />
-                          </div>
+                      </div>
+                      <div className="col-12">
+                        <div className="form-floating">
+                          <Field
+                            as="textarea"
+                            name="message"
+                            min="10"
+                            max="200"
+                            id="message"
+                            placeholder="Leave a message here"
+                            className={`form-control ${Styles.FormText}`}
+                            style={{ height: "150px" }}
+                          />
+                          <label htmlFor="message" className={Styles.FormTextLabel}>Leave a message here</label>
+                          <ErrorMessage
+                            name="message"
+                            component="div"
+                            className="text-red-500"
+                          />
                         </div>
-                        <div className="col-12">
-                          <div className="form-floating">
-                            <ReCAPTCHA
-                              className="g-recaptcha"
-                              sitekey="6Ld7ggEqAAAAAB2AC2jj6CAluRMztZBkHmPT34VS"
-                              ref={recaptchaRef}
-                              onChange={onCaptchaChange}
-                            />
-                          </div>
+                      </div>
+                      <div className="col-12">
+                        <div className="form-floating">
+                          <ReCAPTCHA
+                            className="g-recaptcha"
+                            theme={theme == "dark" ? "dark" : "light"}
+                            sitekey="6Ld7ggEqAAAAAB2AC2jj6CAluRMztZBkHmPT34VS"
+                            ref={recaptchaRef}
+                            onChange={onCaptchaChange}
+                          />
                         </div>
-                        <div className="col-12">
-                          <div className="form-floating">
-                            <button
-                              type="submit"
-                              disabled={isSubmitting}
-                              className={`btn w-100 py-3 ${Styles.Button}`}
-                            >
-                              {isSubmitting ? "Submitting..." : "Send Message"}
-                            </button>
-                          </div>
+                      </div>
+                      <div className="col-12">
+                        <div className="form-floating">
+                          <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className={`btn w-100 py-3 ${Styles.Button}`}
+                          >
+                            {isSubmitting ? "Submitting..." : "Send Message"}
+                          </button>
                         </div>
-                      </div>)}
-                      {status && (<div className="row g-3 mt-1">
+                      </div>
+                    </div>)}
+                    {status && (
+                      <div className="row g-3 mt-1">
                         <div className="col-12">
                           <div className="form-floating">
                             <Alert variant={statusCode == 200 ? 'primary' : 'danger'}>
@@ -207,7 +212,8 @@ const ContactForm = () => {
                             </Alert>
                           </div>
                         </div>
-                      </div>)}
+                      </div>
+                    )}
                   </Form>
                 )}
               </Formik>
