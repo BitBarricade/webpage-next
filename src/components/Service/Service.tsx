@@ -18,7 +18,7 @@ const services = [
     icon: faSearch,
     title: "SEO Optimization",
     description: "Dominate search results with our powerful SEO solutions.",
-    link: "#",
+    link: "https://framer.com/projects/Untitled--z76VROSZnFfl9xjjcSVY-hCKwK?node=nEnu85a9L",
   },
   {
     icon: faLaptopCode,

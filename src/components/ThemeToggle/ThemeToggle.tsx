@@ -12,7 +12,7 @@ const ThemeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleTheme}
-      className={`btn rounded-pill py-2 px-2 ms-3 ${Styles.ThemeBtn}`}
+      className={`btn rounded-pill py-1 px-1 ms-3 ${Styles.ThemeBtn}`}
     >
       {theme === "dark" ? (
         <svg

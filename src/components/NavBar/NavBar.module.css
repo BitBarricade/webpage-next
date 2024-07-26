@@ -15,7 +15,7 @@
     font-family: 'Jost', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: var(--navbar-color) !important;
+    color: var(--white-color) !important;
     outline: none;
     visibility: visible;
     transition: .5s;
@@ -32,7 +32,7 @@
 }
 
 .navbarLight .navbarBrand h1 {
-    color: var(--navbar-color);
+    color: var(--white-color);
     transition: color 0.3s;
     transition: .5s;
 }
@@ -173,15 +173,15 @@
     color: var(--navbar-color);
     background-color: var(--accent-color);
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-bottom: 0.4rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
     border-radius: 50rem;
     margin-left: 1rem;
     display: none;
     visibility: visible;
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     transition: .5s;
     text-align: center;
     vertical-align: middle;

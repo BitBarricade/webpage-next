@@ -2,7 +2,7 @@
 /*** Hero Header ***/
 .heroHeader {
     margin-bottom: 6rem;
-    padding: 14vw 0;
+    padding: 10vw 0;
     background:
         url(/img/blob-top-left.png),
         url(/img/blob-top-right.png),
@@ -25,7 +25,7 @@
 
 [data-theme='dark'] .heroHeader {
     margin-bottom: 6rem;
-    padding: 18rem 0;
+    padding: 10vw 0;
     background:
         url(/img/blob-top-left.png),
         url(/img/blob-top-right.png),
@@ -150,11 +150,11 @@
 @media (min-width: 1200px)
 {
  .TextLg {
-    font-size: 4vw;
+    font-size: 3vw;
  }
 
  .TextSm, .ReadMore, .ContactUs { 
-    font-size: 1.6vw;
+    font-size: 1.39vw;
  }
 
  .Image {
