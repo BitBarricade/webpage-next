@@ -48,13 +48,13 @@ const Footer: React.FC = () => {
               support@bitbarricade.in
             </p>
             <div className="d-flex pt-2">
-              <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
+              <a href="https://x.com/_BitBarricade_?t=Ac7rAPWZy35R6pcfKX0BIg&s=09" className={`btn btn-outline-light ${Styles.btnSocial}`}>
                 <FontAwesomeIcon icon={faTwitter} style={{width: "1em", display: "inline"}}/>
               </a>
               <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
                 <FontAwesomeIcon icon={faFacebookF} style={{width: "1em", display: "inline"}}/>
               </a>
-              <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>
+              <a href="https://www.instagram.com/bitbarricade?igsh=MXVjcWQ1Ynl3eGsxeQ==" className={`btn btn-outline-light ${Styles.btnSocial}`}>
                 <FontAwesomeIcon icon={faInstagram} style={{width: "1em", display: "inline"}}/>
               </a>
               <a href="#" className={`btn btn-outline-light ${Styles.btnSocial}`}>

@@ -30,7 +30,8 @@ const Navbar: React.FC = () => {
     return (
         <nav className={`navbar navbar-expand-lg px-4 px-lg-5 py-3 py-lg-0 ${isSticky ? Styles.stickyTop + " shadow-sm": ""} ${Styles.navbarLight} ${Styles.navbar}`}>
             <Link href="/" className={`navbar-brand p-0 ${Styles.navbarBrand}`}>
-                <h1 className="m-0">DGital</h1>
+            <h1 className="m-0 font-sans">BitB</h1>
+
                 {/* <Image 
                     src="/img/logo/icon.nobg.png" 
                     className="img-fluid flex-shrink-0"

@@ -53,6 +53,9 @@
 }
 
 .TextLg {
+   
+    
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: slideInDown;
@@ -61,6 +64,9 @@
 }
 
 .TextSm {
+   
+
+
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: slideInDown;
@@ -150,11 +156,13 @@
 @media (min-width: 1200px)
 {
  .TextLg {
-    font-size: 4vw;
+    font-size: 2.5rem; /* 24px */
+    line-height: 2.5rem;
  }
 
  .TextSm, .ReadMore, .ContactUs { 
-    font-size: 1.6vw;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem;
  }
 
  .Image {
